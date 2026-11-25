@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Violet Flow components (diseño/imagenes/01-5-hoja-de-estilo.png). BaseTheme in themes.xml makes them the defaults. -->
+<resources>
+
+    <!-- Type scale with Inter: big titles bold, section titles and labels semibold, text regular. -->
+    <style name="TextAppearance.VideoDownloader.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/inter_bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.NavLabel" parent="TextAppearance.VideoDownloader.LabelMedium">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Platform appearances, used by plain TextViews and a few layouts. -->
+    <style name="TextAppearance.VideoDownloader.Platform" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.Platform.Small" parent="TextAppearance.AppCompat.Small">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.Platform.Medium" parent="TextAppearance.AppCompat.Medium">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <style name="TextAppearance.VideoDownloader.Platform.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+    </style>
+
+    <!-- Corner scale: buttons and fields 12 dp, cards 16 dp, sheets and dialogs 28 dp. -->
+    <style name="ShapeAppearance.VideoDownloader.Corner.ExtraSmall" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ShapeAppearance.VideoDownloader.Corner.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.VideoDownloader.Corner.Medium" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.VideoDownloader.Corner.Large" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="ShapeAppearance.VideoDownloader.Corner.ExtraLarge" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <!-- Buttons: main filled, secondary outlined in the main color, text buttons in its readable tone. -->
+    <style name="Widget.VideoDownloader.Button" parent="Widget.Material3.Button">
+        <item name="shapeAppearance">?attr/shapeAppearanceCornerSmall</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="shapeAppearance">?attr/shapeAppearanceCornerSmall</item>
+        <item name="strokeColor">@color/vd_outlined_button_stroke</item>
+        <item name="android:textColor">@color/vd_outlined_button_text</item>
+        <item name="iconTint">@color/vd_outlined_button_text</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="shapeAppearance">?attr/shapeAppearanceCornerSmall</item>
+        <item name="android:textColor">@color/vd_text_button</item>
+        <item name="iconTint">@color/vd_text_button</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.Button.Text.Dialog" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="shapeAppearance">?attr/shapeAppearanceCornerSmall</item>
+        <item name="android:textColor">@color/vd_text_button</item>
+    </style>
+
+    <!-- Segments of a two-way selector, like "En curso | Listos". -->
+    <style name="Widget.VideoDownloader.Button.Segment" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="shapeAppearance">?attr/shapeAppearanceCornerSmall</item>
+        <item name="strokeColor">?attr/colorOutlineVariant</item>
+        <item name="backgroundTint">@color/vd_segment_background</item>
+        <item name="android:textColor">@color/vd_segment_text</item>
+        <item name="android:minHeight">44dp</item>
+    </style>
+
+    <!-- Cards: surface with a hairline border and no shadow. -->
+    <style name="Widget.VideoDownloader.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">?attr/colorSurfaceContainer</item>
+        <item name="strokeColor">?attr/colorOutlineVariant</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <!-- Text fields: outlined and filled with the surface. -->
+    <style name="Widget.VideoDownloader.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">?attr/colorSurfaceContainer</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/vd_text_field_stroke</item>
+        <item name="hintTextColor">?attr/vdColorPrimaryText</item>
+    </style>
+
+    <!-- Chips: pills with a border; the chosen one is filled with the main color. -->
+    <style name="Widget.VideoDownloader.Chip" parent="Widget.Material3.Chip.Assist">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="chipBackgroundColor">@color/vd_chip_background</item>
+        <item name="chipStrokeColor">@color/vd_chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/vd_chip_text</item>
+        <item name="chipIconTint">@color/vd_chip_text</item>
+        <item name="checkedIconTint">?attr/colorOnPrimary</item>
+        <item name="closeIconTint">@color/vd_chip_text</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.Chip.Filter" parent="Widget.Material3.Chip.Filter">
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.Full</item>
+        <item name="chipBackgroundColor">@color/vd_chip_background</item>
+        <item name="chipStrokeColor">@color/vd_chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/vd_chip_text</item>
+        <item name="chipIconTint">@color/vd_chip_text</item>
+        <item name="checkedIconTint">?attr/colorOnPrimary</item>
+        <item name="closeIconTint">@color/vd_chip_text</item>
+    </style>
+
+    <!-- Switches: white thumb at full size in both states, no border. An empty icon keeps the thumb from shrinking. -->
+    <style name="Widget.VideoDownloader.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbTint">@color/vd_switch_thumb</item>
+        <item name="trackTint">@color/vd_switch_track</item>
+        <item name="trackDecorationTint">@android:color/transparent</item>
+        <item name="thumbIcon">@drawable/vd_switch_thumb_icon</item>
+        <item name="thumbIconTint">@android:color/transparent</item>
+    </style>
+
+    <!-- Progress: rounded bar on the border color. -->
+    <style name="Widget.VideoDownloader.LinearProgress" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="trackThickness">6dp</item>
+        <item name="trackCornerRadius">3dp</item>
+        <item name="trackColor">?attr/colorOutlineVariant</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.Tabs" parent="Widget.Material3.TabLayout">
+        <item name="tabTextColor">@color/vd_tab_text</item>
+        <item name="tabIconTint">@color/vd_tab_text</item>
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Bottom bar: flat, with a hairline on top, low, and a small pill around the chosen tab's icon only. -->
+    <style name="Widget.VideoDownloader.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/vd_nav_bar_background</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="itemPaddingTop">8dp</item>
+        <item name="itemPaddingBottom">10dp</item>
+        <item name="itemIconSize">22dp</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.VideoDownloader.BottomNavigation.Indicator</item>
+        <item name="itemIconTint">@color/vd_nav_item</item>
+        <item name="itemTextColor">@color/vd_nav_item</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.VideoDownloader.NavLabel</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.VideoDownloader.NavLabel</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.BottomNavigation.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">56dp</item>
+        <item name="android:height">28dp</item>
+        <item name="android:color">?attr/colorSecondaryContainer</item>
+    </style>
+
+    <!-- Sheets and dialogs on the surface color, with readable buttons. -->
+    <style name="ThemeOverlay.VideoDownloader.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.VideoDownloader.BottomSheet</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">?attr/colorSurfaceContainer</item>
+    </style>
+
+    <style name="ThemeOverlay.VideoDownloader.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.VideoDownloader.Button.Text.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.VideoDownloader.Button.Text.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.VideoDownloader.Button.Text.Dialog</item>
+    </style>
+
+    <!-- Full download sheet ("Más opciones"): section labels, and options as rows inside grouped cards.
+         The rows are still Chips, so the existing code keeps its listeners, badges and checked states. -->
+    <style name="Widget.VideoDownloader.OptionSection" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.VideoDownloader.TitleSmall</item>
+        <item name="android:textColor">?attr/vdColorPrimaryText</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.OptionGroup" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/vd_option_group_background</item>
+        <item name="android:divider">@drawable/vd_option_divider</item>
+        <item name="android:showDividers">middle</item>
+    </style>
+
+    <style name="Widget.VideoDownloader.OptionRow" parent="Widget.Material3.Chip.Assist">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="chipMinHeight">48dp</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="chipBackgroundColor">@color/vd_option_row_background</item>
+        <item name="chipSurfaceColor">@android:color/transparent</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="chipCornerRadius">0dp</item>
+        <item name="chipIconSize">20dp</item>
+        <item name="chipIconTint">?attr/vdColorPrimaryText</item>
+        <item name="chipIconVisible">true</item>
+        <item name="chipStartPadding">14dp</item>
+        <item name="iconStartPadding">0dp</item>
+        <item name="iconEndPadding">0dp</item>
+        <item name="textStartPadding">16dp</item>
+        <item name="textEndPadding">48dp</item>
+        <item name="checkedIcon">@drawable/ic_check</item>
+        <item name="checkedIconTint">?attr/vdColorPrimaryText</item>
+        <item name="android:textAppearance">@style/TextAppearance.VideoDownloader.BodyLarge</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+</resources>

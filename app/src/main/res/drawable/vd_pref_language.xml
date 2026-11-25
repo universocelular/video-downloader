@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Made by scripts/iconos-ajustes.py: a full-color settings icon in the style of the Ajustes rows. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:pathData="M6,24 A18,18 0 1 0 42,24 A18,18 0 1 0 6,24 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="4" android:endX="24" android:endY="44">
+                <item android:color="#4FC3F7" android:offset="0" />
+                <item android:color="#1565C0" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M14,13 Q19,11 21,15 Q20,20 15,20 Q11,19 14,13 Z"
+        android:fillColor="#81C784" />
+    <path
+        android:pathData="M27,26 Q33,23 36,28 Q35,35 29,37 Q25,33 27,26 Z"
+        android:fillColor="#81C784" />
+    <path
+        android:pathData="M24,6 Q14,24 24,42 M24,6 Q34,24 24,42 M7,18 L41,18 M7,30 L41,30"
+        android:strokeColor="#E1F5FE"
+        android:strokeWidth="1.6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

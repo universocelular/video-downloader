@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Made by scripts/iconos-ajustes.py: a full-color settings icon in the style of the Ajustes rows. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:pathData="M11,9 L37,9 A7,7 0 0 1 44,16 L44,32 A7,7 0 0 1 37,39 L11,39 A7,7 0 0 1 4,32 L4,16 A7,7 0 0 1 11,9 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="9" android:endX="24" android:endY="39">
+                <item android:color="#4A4A4A" android:offset="0" />
+                <item android:color="#1E1E1E" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M11,25 L21,25 A2,2 0 0 1 23,27 L23,27 A2,2 0 0 1 21,29 L11,29 A2,2 0 0 1 9,27 L9,27 A2,2 0 0 1 11,25 Z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M28,25 L37,25 A2,2 0 0 1 39,27 L39,27 A2,2 0 0 1 37,29 L28,29 A2,2 0 0 1 26,27 L26,27 A2,2 0 0 1 28,25 Z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M10.8,31.5 L29.2,31.5 A1.8,1.8 0 0 1 31,33.3 L31,33.3 A1.8,1.8 0 0 1 29.2,35.1 L10.8,35.1 A1.8,1.8 0 0 1 9,33.3 L9,33.3 A1.8,1.8 0 0 1 10.8,31.5 Z"
+        android:fillColor="#FFEB3B" />
+</vector>

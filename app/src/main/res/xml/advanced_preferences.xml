@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="YouTube">
+        <Preference
+            android:defaultValue=""
+            android:icon="@drawable/vd_pref_person"
+            android:key="yt_player_client"
+            android:summary="@string/player_client_summary"
+            android:title="@string/player_client" />
+
+        <Preference
+            android:defaultValue=""
+            android:icon="@drawable/vd_pref_stars"
+            android:key="generate_po_tokens"
+            android:title="@string/generate_potokens" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            android:icon="@drawable/vd_pref_language"
+            android:defaultValue="false"
+            android:summary="@string/use_app_language_for_metadata_summary"
+            android:key="use_app_language_for_metadata"
+            android:title="@string/use_app_language_for_metadata" />
+
+<!--        <EditTextPreference-->
+<!--            android:defaultValue=""-->
+<!--            android:icon="@drawable/vd_pref_code"-->
+<!--            android:key="youtube_data_sync_id"-->
+<!--            app:useSimpleSummaryProvider="true"-->
+<!--            android:title="Data Sync ID" />-->
+
+        <EditTextPreference
+            android:defaultValue=""
+            android:icon="@drawable/vd_pref_code"
+            android:key="youtube_other_extractor_args"
+            app:useSimpleSummaryProvider="true"
+            android:title="@string/other_youtube_extractor_args" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/command_templates">
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            android:icon="@drawable/vd_setting_terminal"
+            android:key="enable_data_fetching_extra_commands"
+            android:summary="@string/data_fetching_extra_command_summary"
+            android:title="@string/data_fetching_extra_command" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/format">
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/vd_pref_sort"
+            app:key="use_format_sorting"
+            app:title="@string/use_format_sorting" />
+
+        <Preference
+            android:icon="@drawable/vd_pref_film"
+            android:key="format_importance_video"
+            app:title="@string/format_importance" />
+
+        <Preference
+            android:icon="@drawable/vd_pref_film"
+            android:key="format_importance_audio"
+            app:title="@string/format_importance" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/vd_set_when_downloading">
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            android:icon="@drawable/vd_pref_rename"
+            android:key="disable_write_info_json"
+            android:summary="@string/disable_write_info_json_summary"
+            android:title="@string/disable_write_info_json" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/vd_pref_shield"
+            android:key="no_check_certificates"
+            app:title="@string/no_check_certificates" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/vd_pref_rename"
+            android:key="use_header"
+            app:title="@string/user_agent_header" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/misc">
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            android:icon="@drawable/vd_setting_home"
+            android:key="no_flat_playlist"
+            android:summary="@string/disable_flat_playlist_summary"
+            android:title="@string/disable_flat_playlist" />
+
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            android:icon="@drawable/vd_pref_parallel"
+            android:key="use_original_url_playlist"
+            android:summary="@string/use_original_url_playlist_summary"
+            android:title="@string/use_original_url_playlist" />
+    </PreferenceCategory>
+
+    <Preference
+        app:allowDividerAbove="true"
+        app:icon="@drawable/vd_pref_reset"
+        app:key="reset_preferences"
+        android:summary="@string/reset_preferences_in_screen"
+        app:title="@string/reset" />
+
+</PreferenceScreen>

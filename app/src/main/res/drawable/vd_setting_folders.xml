@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Carpetas y nombres: a yellow folder, in full color as the user asked for Ajustes (03/11/2026). -->
+    <path
+        android:pathData="M5,12 A4,4 0 0 1 9,8 L18.5,8 A3,3 0 0 1 20.6,8.9 L23.5,11.8 A2,2 0 0 0 24.9,12.4 L39,12.4 A4,4 0 0 1 43,16.4 L43,36 A4,4 0 0 1 39,40 L9,40 A4,4 0 0 1 5,36 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="8" android:endX="24" android:endY="40">
+                <item android:color="#F7B23B" android:offset="0" />
+                <item android:color="#E58A12" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M11,14.5 L37,14.5 A2,2 0 0 1 39,16.5 L39,26.5 A2,2 0 0 1 37,28.5 L11,28.5 A2,2 0 0 1 9,26.5 L9,16.5 A2,2 0 0 1 11,14.5 Z"
+        android:fillColor="#F7F9FC" />
+    <path
+        android:pathData="M5,21 A3,3 0 0 1 8,18 L40,18 A3,3 0 0 1 43,21 L43,37 A4,4 0 0 1 39,41 L9,41 A4,4 0 0 1 5,37 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="18" android:endX="24" android:endY="41">
+                <item android:color="#FFE28A" android:offset="0" />
+                <item android:color="#FFBF1F" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M8.5,20.6 L39.5,20.6"
+        android:strokeColor="#80FFFFFF"
+        android:strokeWidth="1.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

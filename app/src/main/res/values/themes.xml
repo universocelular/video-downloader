@@ -1,0 +1,179 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Only what differs between light and dark mode lives here; values-night redefines it on the dark parent. -->
+    <style name="Base.Theme.VideoDownloader" parent="Theme.Material3.Light.NoActionBar">
+        <item name="actionBarTheme">@style/ThemeOverlay.Material3.Light</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <!-- Violet Flow (diseño/imagenes/01-5-hoja-de-estilo.png). colors_videodownloader.xml holds light and dark values,
+         so this one theme serves both modes. Its main color is violet; the Theme.* styles below swap it. -->
+    <style name="BaseTheme" parent="Base.Theme.VideoDownloader">
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="alertDialogTheme">@style/ThemeOverlay.VideoDownloader.Dialog</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.VideoDownloader.Dialog</item>
+        <item name="dialogCornerRadius">28dp</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="switchPreferenceCompatStyle">@style/Preference.SwitchPreferenceCompat.Material3</item>
+        <item name="snackbarStyle">@style/snackBarStyle</item>
+        <item name="preferenceTheme">@style/PreferenceTheme</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
+        <!-- Flat surfaces: no main-color tint on raised cards and menus. -->
+        <item name="elevationOverlayEnabled">false</item>
+
+        <item name="android:colorBackground">@color/vd_background</item>
+        <item name="colorOnBackground">@color/vd_text</item>
+        <item name="colorSurface">@color/vd_background</item>
+        <item name="colorOnSurface">@color/vd_text</item>
+        <item name="colorSurfaceVariant">@color/vd_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/vd_text_secondary</item>
+        <item name="colorSurfaceContainerLowest">@color/vd_surface_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/vd_surface_low</item>
+        <item name="colorSurfaceContainer">@color/vd_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/vd_surface_high</item>
+        <item name="colorSurfaceContainerHighest">@color/vd_surface_highest</item>
+        <item name="colorSurfaceBright">@color/vd_surface_bright</item>
+        <item name="colorSurfaceDim">@color/vd_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/vd_inverse_surface</item>
+        <item name="colorOnSurfaceInverse">@color/vd_inverse_on_surface</item>
+        <item name="colorOutline">@color/vd_outline</item>
+        <item name="colorOutlineVariant">@color/vd_outline_variant</item>
+        <item name="colorSecondary">@color/vd_secondary</item>
+        <item name="colorOnSecondary">@color/vd_on_secondary</item>
+        <item name="colorError">@color/vd_error</item>
+        <item name="colorOnError">@color/vd_on_error</item>
+        <item name="colorErrorContainer">@color/vd_error_container</item>
+        <item name="colorOnErrorContainer">@color/vd_on_error_container</item>
+        <item name="android:textColorLink">?attr/vdColorPrimaryText</item>
+
+        <item name="colorPrimary">@color/vd_violet_primary</item>
+        <item name="colorOnPrimary">@color/vd_violet_on_primary</item>
+        <item name="colorPrimaryContainer">@color/vd_violet_container</item>
+        <item name="colorOnPrimaryContainer">@color/vd_violet_on_container</item>
+        <item name="colorSecondaryContainer">@color/vd_violet_container</item>
+        <item name="colorOnSecondaryContainer">@color/vd_violet_on_container</item>
+        <item name="colorPrimaryInverse">@color/vd_violet_inverse</item>
+        <item name="colorTertiary">@color/vd_violet_support</item>
+        <item name="colorOnTertiary">@color/vd_violet_on_support</item>
+        <item name="colorTertiaryContainer">@color/vd_violet_support_container</item>
+        <item name="colorOnTertiaryContainer">@color/vd_violet_on_support_container</item>
+        <item name="vdColorPrimaryText">@color/vd_violet_text</item>
+
+        <!-- Inter through every text style; the font is not set theme-wide because that would override the weights. -->
+        <item name="textAppearanceDisplayLarge">@style/TextAppearance.VideoDownloader.DisplayLarge</item>
+        <item name="textAppearanceDisplayMedium">@style/TextAppearance.VideoDownloader.DisplayMedium</item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.VideoDownloader.DisplaySmall</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.VideoDownloader.HeadlineLarge</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.VideoDownloader.HeadlineMedium</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.VideoDownloader.HeadlineSmall</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.VideoDownloader.TitleLarge</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.VideoDownloader.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.VideoDownloader.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.VideoDownloader.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.VideoDownloader.BodyMedium</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.VideoDownloader.BodySmall</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.VideoDownloader.LabelLarge</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.VideoDownloader.LabelMedium</item>
+        <item name="textAppearanceLabelSmall">@style/TextAppearance.VideoDownloader.LabelSmall</item>
+        <item name="android:textAppearance">@style/TextAppearance.VideoDownloader.Platform</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.VideoDownloader.Platform.Small</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.VideoDownloader.Platform.Medium</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearance.VideoDownloader.Platform.Large</item>
+
+        <item name="shapeAppearanceCornerExtraSmall">@style/ShapeAppearance.VideoDownloader.Corner.ExtraSmall</item>
+        <item name="shapeAppearanceCornerSmall">@style/ShapeAppearance.VideoDownloader.Corner.Small</item>
+        <item name="shapeAppearanceCornerMedium">@style/ShapeAppearance.VideoDownloader.Corner.Medium</item>
+        <item name="shapeAppearanceCornerLarge">@style/ShapeAppearance.VideoDownloader.Corner.Large</item>
+        <item name="shapeAppearanceCornerExtraLarge">@style/ShapeAppearance.VideoDownloader.Corner.ExtraLarge</item>
+
+        <item name="materialButtonStyle">@style/Widget.VideoDownloader.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.VideoDownloader.Button.Outlined</item>
+        <item name="borderlessButtonStyle">@style/Widget.VideoDownloader.Button.Text</item>
+        <item name="materialCardViewStyle">@style/Widget.VideoDownloader.Card</item>
+        <item name="textInputStyle">@style/Widget.VideoDownloader.TextInput</item>
+        <item name="chipStyle">@style/Widget.VideoDownloader.Chip</item>
+        <item name="materialSwitchStyle">@style/Widget.VideoDownloader.Switch</item>
+        <item name="linearProgressIndicatorStyle">@style/Widget.VideoDownloader.LinearProgress</item>
+        <item name="tabStyle">@style/Widget.VideoDownloader.Tabs</item>
+        <item name="bottomNavigationStyle">@style/Widget.VideoDownloader.BottomNavigation</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.VideoDownloader.BottomSheetDialog</item>
+    </style>
+
+    <!-- "Color principal" choices besides violet (diseño/imagenes/09-2-apariencia.png). -->
+    <style name="Theme.Turquoise" parent="BaseTheme">
+        <item name="colorPrimary">@color/vd_turquoise_primary</item>
+        <item name="colorOnPrimary">@color/vd_turquoise_on_primary</item>
+        <item name="colorPrimaryContainer">@color/vd_turquoise_container</item>
+        <item name="colorOnPrimaryContainer">@color/vd_turquoise_on_container</item>
+        <item name="colorSecondaryContainer">@color/vd_turquoise_container</item>
+        <item name="colorOnSecondaryContainer">@color/vd_turquoise_on_container</item>
+        <item name="colorPrimaryInverse">@color/vd_turquoise_inverse</item>
+        <item name="colorTertiary">@color/vd_turquoise_support</item>
+        <item name="colorOnTertiary">@color/vd_turquoise_on_support</item>
+        <item name="colorTertiaryContainer">@color/vd_turquoise_support_container</item>
+        <item name="colorOnTertiaryContainer">@color/vd_turquoise_on_support_container</item>
+        <item name="vdColorPrimaryText">@color/vd_turquoise_text</item>
+    </style>
+
+    <style name="Theme.Pink" parent="BaseTheme">
+        <item name="colorPrimary">@color/vd_pink_primary</item>
+        <item name="colorOnPrimary">@color/vd_pink_on_primary</item>
+        <item name="colorPrimaryContainer">@color/vd_pink_container</item>
+        <item name="colorOnPrimaryContainer">@color/vd_pink_on_container</item>
+        <item name="colorSecondaryContainer">@color/vd_pink_container</item>
+        <item name="colorOnSecondaryContainer">@color/vd_pink_on_container</item>
+        <item name="colorPrimaryInverse">@color/vd_pink_inverse</item>
+        <item name="colorTertiary">@color/vd_pink_support</item>
+        <item name="colorOnTertiary">@color/vd_pink_on_support</item>
+        <item name="colorTertiaryContainer">@color/vd_pink_support_container</item>
+        <item name="colorOnTertiaryContainer">@color/vd_pink_on_support_container</item>
+        <item name="vdColorPrimaryText">@color/vd_pink_text</item>
+    </style>
+
+    <style name="Theme.Orange" parent="BaseTheme">
+        <item name="colorPrimary">@color/vd_orange_primary</item>
+        <item name="colorOnPrimary">@color/vd_orange_on_primary</item>
+        <item name="colorPrimaryContainer">@color/vd_orange_container</item>
+        <item name="colorOnPrimaryContainer">@color/vd_orange_on_container</item>
+        <item name="colorSecondaryContainer">@color/vd_orange_container</item>
+        <item name="colorOnSecondaryContainer">@color/vd_orange_on_container</item>
+        <item name="colorPrimaryInverse">@color/vd_orange_inverse</item>
+        <item name="colorTertiary">@color/vd_orange_support</item>
+        <item name="colorOnTertiary">@color/vd_orange_on_support</item>
+        <item name="colorTertiaryContainer">@color/vd_orange_support_container</item>
+        <item name="colorOnTertiaryContainer">@color/vd_orange_on_support_container</item>
+        <item name="vdColorPrimaryText">@color/vd_orange_text</item>
+    </style>
+
+    <style name="Theme.Lime" parent="BaseTheme">
+        <item name="colorPrimary">@color/vd_lime_primary</item>
+        <item name="colorOnPrimary">@color/vd_lime_on_primary</item>
+        <item name="colorPrimaryContainer">@color/vd_lime_container</item>
+        <item name="colorOnPrimaryContainer">@color/vd_lime_on_container</item>
+        <item name="colorSecondaryContainer">@color/vd_lime_container</item>
+        <item name="colorOnSecondaryContainer">@color/vd_lime_on_container</item>
+        <item name="colorPrimaryInverse">@color/vd_lime_inverse</item>
+        <item name="colorTertiary">@color/vd_lime_support</item>
+        <item name="colorOnTertiary">@color/vd_lime_on_support</item>
+        <item name="colorTertiaryContainer">@color/vd_lime_support_container</item>
+        <item name="colorOnTertiaryContainer">@color/vd_lime_on_support_container</item>
+        <item name="vdColorPrimaryText">@color/vd_lime_text</item>
+    </style>
+
+    <!-- "Contraste alto": pure background, firmer borders and brighter secondary text, over any main color. -->
+    <style name="Pure">
+        <item name="android:colorBackground">@color/vd_hc_background</item>
+        <item name="colorSurface">@color/vd_hc_background</item>
+        <item name="colorSurfaceDim">@color/vd_hc_background</item>
+        <item name="colorSurfaceContainerLowest">@color/vd_hc_surface_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/vd_hc_surface_low</item>
+        <item name="colorSurfaceContainer">@color/vd_hc_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/vd_hc_surface_high</item>
+        <item name="colorSurfaceContainerHighest">@color/vd_hc_surface_highest</item>
+        <item name="colorOnSurfaceVariant">@color/vd_hc_text_secondary</item>
+        <item name="colorOutline">@color/vd_hc_outline</item>
+        <item name="colorOutlineVariant">@color/vd_hc_outline_variant</item>
+    </style>
+
+</resources>

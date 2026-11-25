@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Invisible thumb icon: MaterialSwitch draws the thumb at full size whenever it has an icon. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <size
+        android:width="16dp"
+        android:height="16dp" />
+    <solid android:color="@android:color/transparent" />
+</shape>

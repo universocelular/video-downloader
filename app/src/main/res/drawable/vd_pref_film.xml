@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Made by scripts/iconos-ajustes.py: a full-color settings icon in the style of the Ajustes rows. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:pathData="M11,6 L37,6 A5,5 0 0 1 42,11 L42,37 A5,5 0 0 1 37,42 L11,42 A5,5 0 0 1 6,37 L6,11 A5,5 0 0 1 11,6 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="6" android:endX="24" android:endY="42">
+                <item android:color="#546E7A" android:offset="0" />
+                <item android:color="#263238" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M9.8,10 L11.6,10 A0.8,0.8 0 0 1 12.4,10.8 L12.4,12.6 A0.8,0.8 0 0 1 11.6,13.4 L9.8,13.4 A0.8,0.8 0 0 1 9,12.6 L9,10.8 A0.8,0.8 0 0 1 9.8,10 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M9.8,17 L11.6,17 A0.8,0.8 0 0 1 12.4,17.8 L12.4,19.6 A0.8,0.8 0 0 1 11.6,20.4 L9.8,20.4 A0.8,0.8 0 0 1 9,19.6 L9,17.8 A0.8,0.8 0 0 1 9.8,17 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M9.8,24 L11.6,24 A0.8,0.8 0 0 1 12.4,24.8 L12.4,26.6 A0.8,0.8 0 0 1 11.6,27.4 L9.8,27.4 A0.8,0.8 0 0 1 9,26.6 L9,24.8 A0.8,0.8 0 0 1 9.8,24 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M9.8,31 L11.6,31 A0.8,0.8 0 0 1 12.4,31.8 L12.4,33.6 A0.8,0.8 0 0 1 11.6,34.4 L9.8,34.4 A0.8,0.8 0 0 1 9,33.6 L9,31.8 A0.8,0.8 0 0 1 9.8,31 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M9.8,37.5 L11.6,37.5 A0.8,0.8 0 0 1 12.4,38.3 L12.4,40.1 A0.8,0.8 0 0 1 11.6,40.9 L9.8,40.9 A0.8,0.8 0 0 1 9,40.1 L9,38.3 A0.8,0.8 0 0 1 9.8,37.5 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M36.4,10 L38.2,10 A0.8,0.8 0 0 1 39,10.8 L39,12.6 A0.8,0.8 0 0 1 38.2,13.4 L36.4,13.4 A0.8,0.8 0 0 1 35.6,12.6 L35.6,10.8 A0.8,0.8 0 0 1 36.4,10 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M36.4,17 L38.2,17 A0.8,0.8 0 0 1 39,17.8 L39,19.6 A0.8,0.8 0 0 1 38.2,20.4 L36.4,20.4 A0.8,0.8 0 0 1 35.6,19.6 L35.6,17.8 A0.8,0.8 0 0 1 36.4,17 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M36.4,24 L38.2,24 A0.8,0.8 0 0 1 39,24.8 L39,26.6 A0.8,0.8 0 0 1 38.2,27.4 L36.4,27.4 A0.8,0.8 0 0 1 35.6,26.6 L35.6,24.8 A0.8,0.8 0 0 1 36.4,24 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M36.4,31 L38.2,31 A0.8,0.8 0 0 1 39,31.8 L39,33.6 A0.8,0.8 0 0 1 38.2,34.4 L36.4,34.4 A0.8,0.8 0 0 1 35.6,33.6 L35.6,31.8 A0.8,0.8 0 0 1 36.4,31 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M36.4,37.5 L38.2,37.5 A0.8,0.8 0 0 1 39,38.3 L39,40.1 A0.8,0.8 0 0 1 38.2,40.9 L36.4,40.9 A0.8,0.8 0 0 1 35.6,40.1 L35.6,38.3 A0.8,0.8 0 0 1 36.4,37.5 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M17.5,11 L30.5,11 A2,2 0 0 1 32.5,13 L32.5,35 A2,2 0 0 1 30.5,37 L17.5,37 A2,2 0 0 1 15.5,35 L15.5,13 A2,2 0 0 1 17.5,11 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="11" android:endX="24" android:endY="37">
+                <item android:color="#4FC3F7" android:offset="0" />
+                <item android:color="#0288D1" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M21,19 L29,24 L21,29 Z"
+        android:fillColor="#FFFFFF" />
+</vector>

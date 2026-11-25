@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+
+                style="@style/Widget.VideoDownloader.OptionSection"
+
+                android:layout_marginStart="16dp"
+
+                android:text="@string/vd_more_file" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/title_textinput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="10dp"
+                android:hint="@string/title"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:inputType="text"
+                    android:layout_height="wrap_content"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:divider="@drawable/divider_10dp"
+                android:showDividers="middle"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/author_textinput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="42"
+                    android:hint="@string/author"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/downloadContainer"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_weight="58"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/container">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/container_textview"
+                    android:maxLines="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textDirection="locale"
+                        android:inputType="none"
+                        app:simpleItems="@array/audio_containers"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+
+                style="@style/Widget.VideoDownloader.OptionSection"
+
+                android:layout_marginStart="16dp"
+
+                android:text="@string/vd_more_quality" />
+            <include layout="@layout/format_item" />
+
+
+            <TextView
+
+
+                style="@style/Widget.VideoDownloader.OptionSection"
+
+
+                android:layout_marginStart="16dp"
+
+
+                android:text="@string/vd_more_folder" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outputPath"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="0dp"
+                android:paddingTop="0dp"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:inputType="textMultiLine" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/freespace"
+                android:paddingHorizontal="20dp"
+                android:textSize="13sp"
+                android:textColor="@android:color/tab_indicator_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/adjust_audio" />
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

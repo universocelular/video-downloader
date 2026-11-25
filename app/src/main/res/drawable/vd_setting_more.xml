@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Todos los ajustes: a gear, in full color as the user asked for Ajustes (03/11/2026). -->
+    <path
+        android:pathData="M20.34,9.25 L21.34,4.18 L26.66,4.18 L27.66,9.25 A15.2,15.2 0 0 1 31.84,10.98 L31.84,10.98 L36.13,8.1 L39.9,11.87 L37.02,16.16 A15.2,15.2 0 0 1 38.75,20.34 L38.75,20.34 L43.82,21.34 L43.82,26.66 L38.75,27.66 A15.2,15.2 0 0 1 37.02,31.84 L37.02,31.84 L39.9,36.13 L36.13,39.9 L31.84,37.02 A15.2,15.2 0 0 1 27.66,38.75 L27.66,38.75 L26.66,43.82 L21.34,43.82 L20.34,38.75 A15.2,15.2 0 0 1 16.16,37.02 L16.16,37.02 L11.87,39.9 L8.1,36.13 L10.98,31.84 A15.2,15.2 0 0 1 9.25,27.66 L9.25,27.66 L4.18,26.66 L4.18,21.34 L9.25,20.34 A15.2,15.2 0 0 1 10.98,16.16 L10.98,16.16 L8.1,11.87 L11.87,8.1 L16.16,10.98 A15.2,15.2 0 0 1 20.34,9.25 Z M17.8,24 A6.2,6.2 0 1 0 30.2,24 A6.2,6.2 0 1 0 17.8,24 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="8" android:startY="6" android:endX="40" android:endY="42">
+                <item android:color="#D5DDE2" android:offset="0" />
+                <item android:color="#5F7480" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M14.6,24 A9.4,9.4 0 1 0 33.4,24 A9.4,9.4 0 1 0 14.6,24 Z"
+        android:strokeColor="#40FFFFFF"
+        android:strokeWidth="1.4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

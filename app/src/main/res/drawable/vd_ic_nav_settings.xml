@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Line icon for the bottom bar (diseño/imagenes/01-5-hoja-de-estilo.png); the bar tints it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M9.89,5.11 L10.5,2.52 L13.5,2.52 L14.11,5.11 L15.38,5.64 L17.64,4.23 L19.77,6.36 L18.36,8.62 L18.89,9.89 L21.48,10.5 L21.48,13.5 L18.89,14.11 L18.36,15.38 L19.77,17.64 L17.64,19.77 L15.38,18.36 L14.11,18.89 L13.5,21.48 L10.5,21.48 L9.89,18.89 L8.62,18.36 L6.36,19.77 L4.23,17.64 L5.64,15.38 L5.11,14.11 L2.52,13.5 L2.52,10.5 L5.11,9.89 L5.64,8.62 L4.23,6.36 L6.36,4.23 L8.62,5.64 Z"
+        android:strokeWidth="2"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M12,9 A3,3 0 1 1 11.99,9 Z"
+        android:strokeWidth="2"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

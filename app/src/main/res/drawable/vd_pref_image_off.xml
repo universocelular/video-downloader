@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Made by scripts/iconos-ajustes.py: a full-color settings icon in the style of the Ajustes rows. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:pathData="M11,9 L37,9 A6,6 0 0 1 43,15 L43,33 A6,6 0 0 1 37,39 L11,39 A6,6 0 0 1 5,33 L5,15 A6,6 0 0 1 11,9 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="9" android:endX="24" android:endY="39">
+                <item android:color="#B0BEC5" android:offset="0" />
+                <item android:color="#78909C" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M8,36 L19,22 L27,31 L31,27 L40,36 Z"
+        android:fillColor="#546E7A" />
+    <path
+        android:pathData="M28.4,17 A3.6,3.6 0 1 0 35.6,17 A3.6,3.6 0 1 0 28.4,17 Z"
+        android:fillColor="#ECEFF1" />
+    <path
+        android:pathData="M9,7 L39,41"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M9,7 L39,41"
+        android:strokeColor="#E53935"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

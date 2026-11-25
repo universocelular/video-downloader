@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.deniscerri.ytdl.ui.more.settings.folder.temporary.TemporaryFilesSummaryPreference
+        app:key="temporary_files_summary" />
+
+    <PreferenceCategory android:title="@string/temporary_files">
+
+        <com.deniscerri.ytdl.ui.more.settings.folder.temporary.SizePreference
+            app:icon="@drawable/vd_setting_downloads"
+            app:key="temp_unfinished_downloads"
+            app:summary="@string/unfinished_downloads_summary"
+            app:title="@string/unfinished_downloads" />
+
+        <com.deniscerri.ytdl.ui.more.settings.folder.temporary.SizePreference
+            app:icon="@drawable/vd_pref_code"
+            app:key="temp_info_jsons"
+            app:summary="@string/info_jsons_summary"
+            app:title="@string/info_jsons" />
+
+        <com.deniscerri.ytdl.ui.more.settings.folder.temporary.SizePreference
+            app:icon="@drawable/vd_setting_terminal"
+            app:key="temp_ytdlp_cache"
+            app:summary="@string/ytdlp_cache_summary"
+            app:title="@string/ytdlp_cache" />
+
+        <com.deniscerri.ytdl.ui.more.settings.folder.temporary.SizePreference
+            app:icon="@drawable/vd_pref_chip"
+            app:key="temp_configs"
+            app:summary="@string/temporary_configurations_summary"
+            app:title="@string/temporary_configurations" />
+
+        <com.deniscerri.ytdl.ui.more.settings.folder.temporary.SizePreference
+            app:icon="@drawable/vd_pref_phone_update"
+            app:key="temp_downloaded_installers"
+            app:summary="@string/downloaded_apks_summary"
+            app:title="@string/downloaded_apks" />
+
+    </PreferenceCategory>
+
+    <Preference
+        app:icon="@drawable/vd_setting_folders"
+        app:key="move_cache"
+        android:summary="@string/move_temporary_files_summary"
+        app:title="@string/move_temporary_files" />
+
+    <com.deniscerri.ytdl.ui.more.settings.folder.temporary.DangerButtonPreference
+        app:key="clear_all_temporary_files"
+        app:title="@string/clear_everything" />
+
+</PreferenceScreen>

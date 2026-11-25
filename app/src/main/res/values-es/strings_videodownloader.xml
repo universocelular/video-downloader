@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Video Downloader: textos propios y traducciones que faltaban en YTDLnis 1.9.1.1.
+     Si una versión nueva de YTDLnis trae alguna de estas traducciones en strings.xml, hay que borrarla de acá. -->
+<resources>
+    <!-- Textos propios de Video Downloader -->
+    <string name="vd_login_not_supported">Este contenido pide iniciar sesión en el sitio. Video Downloader no usa cuentas, así que no puede descargarlo.</string>
+    <string name="vd_privacy_summary">🔐 Sin cuentas, sin publicidad y sin enviar tus datos a terceros</string>
+    <string name="vd_based_on">Versión modificada de YTDLnis, de Denis Çerri (GPL-3.0), cambiada el 29/10/2026. Toca para ver el código original.</string>
+
+    <!-- Traducciones que faltaban -->
+    <string name="reorder_queue">Reordenar la cola</string>
+    <string name="crop_unavailable_please_update_item">Para recortar, primero hay que actualizar los datos del elemento</string>
+    <string name="update_install">Instalar</string>
+    <string name="version_update_available">%1$s → %2$s</string>
+    <string name="update_checked_ago">Revisado %1$s</string>
+    <string name="update_checked_just_now">Revisado recién</string>
+    <string name="update_not_checked_yet">Todavía no se revisó</string>
+    <string name="temporary_files_description">Archivos de trabajo de la app: configuraciones temporales y otros datos de yt-dlp.</string>
+    <string name="ytdlp_cache_summary">Datos que yt-dlp reutiliza entre usos, como las firmas del reproductor de YouTube</string>
+    <string name="failed_to_fetch_summary">No se pudieron obtener los datos de estos elementos. Reintenta o descárgalos sin esos datos.</string>
+    <string name="retry">Reintentar</string>
+    <string name="retry_all">Reintentar todo</string>
+    <string name="download_anyway">Descargar igual</string>
+    <string name="write_ytdlp_terminal">Escribir yt-dlp automáticamente en la terminal</string>
+    <string name="clear">Limpiar</string>
+    <string name="welcome_title">Te damos la bienvenida a Video Downloader</string>
+    <string name="welcome_subtitle">Descarga videos y audios con yt-dlp. Primero, unos ajustes rápidos.</string>
+    <string name="welcome_get_started">Empezar</string>
+    <string name="welcome_restore_backup">Restaurar una copia de seguridad</string>
+    <string name="welcome_restore_failed">No se pudo restaurar esta copia de seguridad</string>
+    <string name="welcome_restoring">Restaurando la copia de seguridad…</string>
+    <string name="welcome_guide_title">Leer la guía</string>
+    <string name="welcome_guide_summary">La guía de YTDLnis (en inglés), el proyecto en el que se basa esta app, explica las descargas, las plantillas de comandos y cómo resolver problemas comunes. Se puede abrir en cualquier momento desde su sitio web.</string>
+    <string name="welcome_open_guide">Abrir la guía</string>
+    <string name="welcome_permissions_title">Permisos</string>
+    <string name="welcome_permissions_summary">Video Downloader funciona mejor con estos permisos. Puedes cambiarlos después en los ajustes.</string>
+    <string name="welcome_perm_storage">Acceso al almacenamiento</string>
+    <string name="welcome_perm_storage_summary">Necesario para guardar las descargas en el dispositivo.</string>
+    <string name="welcome_perm_notifications">Notificaciones</string>
+    <string name="welcome_perm_notifications_summary">Muestra el progreso de las descargas y avisa cuando terminan.</string>
+    <string name="welcome_perm_battery">Uso de batería sin restricciones</string>
+    <string name="welcome_perm_battery_summary">Evita que las descargas largas se detengan en segundo plano.</string>
+    <string name="welcome_perm_alarms">Alarmas y recordatorios</string>
+    <string name="welcome_perm_alarms_summary">Permite que las descargas programadas empiecen a la hora exacta.</string>
+    <string name="welcome_allow">Permitir</string>
+    <string name="welcome_allowed">Permitido</string>
+    <string name="welcome_required">Obligatorio</string>
+    <string name="welcome_perm_folders_header">Carpetas restauradas</string>
+    <string name="welcome_perm_folders_summary">Tu copia de seguridad usa estas carpetas, pero la app perdió el acceso. Vuelve a permitir cada una o elige otra carpeta.</string>
+    <string name="welcome_updates_title">Actualizaciones</string>
+    <string name="welcome_updates_summary">Elige cómo se mantiene actualizado Video Downloader.</string>
+    <string name="welcome_next">Siguiente</string>
+    <string name="welcome_finish">Terminar</string>
+    <string name="lyrics">Letra</string>
+    <string name="embed_lyrics">Incrustar la letra</string>
+    <string name="save_lrc_file">Guardar archivo .lrc</string>
+    <string name="lyrics_offset">Desfase</string>
+    <string name="lyrics_not_found">No se encontró la letra</string>
+    <string name="lyrics_unsynced">La letra no está sincronizada; no hay tiempos para ajustar</string>
+    <string name="lyrics_source">Letras de lrclib.net</string>
+    <string name="lyrics_no_preview">No hay vista previa, pero la letra se agregará al descargar</string>
+    <string name="lyrics_synced">Sincronizada</string>
+    <string name="lyrics_plain">Texto simple</string>
+    <string name="embed_lyrics_summary">Busca la letra en lrclib.net (un servicio externo) y la incrusta en las descargas de audio</string>
+    <string name="save_lrc_file_summary">Guarda la letra sincronizada como archivo .lrc junto a las descargas de audio</string>
+    <string name="crop_unsupported">El recorte no está disponible para este elemento</string>
+
+    <plurals name="queue_items">
+        <item quantity="one">%d elemento</item>
+        <item quantity="many">%d elementos</item>
+        <item quantity="other">%d elementos</item>
+    </plurals>
+    <plurals name="updates_available_summary">
+        <item quantity="one">%d actualización disponible</item>
+        <item quantity="many">%d actualizaciones disponibles</item>
+        <item quantity="other">%d actualizaciones disponibles</item>
+    </plurals>
+    <plurals name="items_failed_to_fetch">
+        <item quantity="one">No se pudo obtener %d elemento</item>
+        <item quantity="many">No se pudieron obtener %d elementos</item>
+        <item quantity="other">No se pudieron obtener %d elementos</item>
+    </plurals>
+
+    <!-- Dividir para WhatsApp -->
+    <string name="vd_split_title">Dividir para WhatsApp</string>
+    <string name="vd_close">Cerrar</string>
+    <string name="vd_split_downloading">Bajando el video</string>
+    <string name="vd_split_part_over">Pasa el límite</string>
+    <string name="vd_split_share">Compartir</string>
+    <string name="vd_split_another">Dividir otro video</string>
+    <string name="vd_split_cancel">Cancelar</string>
+    <string name="vd_split_try_again">Probar de nuevo</string>
+    <string name="vd_split_failed">No se pudo completar</string>
+    <string name="vd_split_error_download">No se pudo bajar el video.</string>
+    <string name="vd_split_error_cut">No se pudo dividir el video.</string>
+    <string name="vd_split_clipboard_empty">No hay ningún enlace copiado.</string>
+    <string name="vd_split_duration">Duración de cada parte</string>
+    <string name="vd_split_seconds">%1$d s</string>
+    <string name="vd_split_other">Otra</string>
+    <string name="vd_split_seconds_field">Segundos</string>
+    <string name="vd_split_limit_hint">WhatsApp acepta hasta 90 s por estado.</string>
+    <string name="vd_split_mode_whole">Todo</string>
+    <string name="vd_split_mode_even">Partes iguales</string>
+    <string name="vd_split_mode_range">Un tramo</string>
+    <string name="vd_split_part_name">%1$s - parte %2$d de %3$d</string>
+    <string name="vd_split_cut_exact_hint">Cada parte dura justo lo que elegiste, en el formato que acepta WhatsApp. Tarda más porque el video se vuelve a comprimir.</string>
+    <string name="vd_split_cut_original_hint">Mantiene la calidad original, pero una parte puede terminar unos segundos antes.</string>
+    <plurals name="vd_split_done">
+        <item quantity="one">¡Listo! %d parte</item>
+        <item quantity="many">¡Listo! %d partes</item>
+        <item quantity="other">¡Listo! %d partes</item>
+    </plurals>
+
+    <!-- Guardar estados -->
+    <string name="vd_statuses_title">Guardar estados</string>
+    <string name="vd_statuses_loading">Buscando estados</string>
+    <string name="vd_statuses_no_whatsapp">No está instalado WhatsApp ni WhatsApp Business en este celular.</string>
+    <string name="vd_statuses_access_title">Permiso para ver los estados</string>
+    <string name="vd_statuses_access">Los estados que miras en %1$s quedan un tiempo en una carpeta del celular. Para mostrarlos aquí, Android te pide permiso para esa carpeta: toca «Usar esta carpeta» y después «Permitir».</string>
+    <string name="vd_statuses_access_button">Dar permiso</string>
+    <string name="vd_statuses_access_hint">La app solo lee esa carpeta y borra los estados que tú elijas. Si se abre otra, entra en Android › media › %2$s y toca «Usar esta carpeta». Si nunca miraste un estado en %1$s, mira uno antes, así la carpeta existe.</string>
+    <string name="vd_statuses_wrong_folder">Esa no es la carpeta de estados de %1$s. Vuelve a intentarlo y toca «Usar esta carpeta» sin cambiar de carpeta.</string>
+    <string name="vd_statuses_no_picker">Este celular no tiene el selector de carpetas de Android.</string>
+    <string name="vd_statuses_empty_title">No hay estados para guardar</string>
+    <string name="vd_statuses_empty">Abre %1$s, mira algunos estados y vuelve. Los estados de solo texto no se pueden guardar porque WhatsApp no los guarda como archivo.</string>
+    <string name="vd_statuses_none_of_kind">No hay estados de este tipo.</string>
+    <string name="vd_statuses_all">Todos</string>
+    <string name="vd_statuses_photos">Fotos</string>
+    <string name="vd_statuses_videos">Videos</string>
+    <string name="vd_statuses_save">Guardar</string>
+    <string name="vd_statuses_saved">Guardado</string>
+    <string name="vd_statuses_saved_where">Se guardan en la galería, en el álbum «%1$s».</string>
+    <string name="vd_statuses_save_failed">No se pudo guardar el estado.</string>
+    <string name="vd_statuses_gone">Ese estado ya no está disponible.</string>
+    <string name="vd_statuses_photo">Foto</string>
+    <string name="vd_statuses_video">Video</string>
+    <string name="vd_statuses_video_length">Video de %1$s</string>
+    <string name="vd_statuses_position">%1$d de %2$d</string>
+    <string name="vd_statuses_play">Reproducir o pausar</string>
+    <string name="vd_statuses_choose">Elegir</string>
+    <string name="vd_statuses_choose_title">Elige estados</string>
+    <plurals name="vd_statuses_delete_confirm">
+        <item quantity="one">¿Borrar este estado?</item>
+        <item quantity="other">¿Borrar %1$d estados?</item>
+    </plurals>
+    <plurals name="vd_statuses_delete_note">
+        <item quantity="one">Se borra de aquí y de la galería, y no se puede recuperar.</item>
+        <item quantity="other">Se borran de aquí y de la galería, y no se pueden recuperar.</item>
+    </plurals>
+    <string name="vd_statuses_delete_access">Antes, Android te pedirá otra vez permiso para la carpeta de estados: toca «Usar esta carpeta» y después «Permitir».</string>
+    <plurals name="vd_statuses_deleted">
+        <item quantity="one">Se borró %1$d estado</item>
+        <item quantity="other">Se borraron %1$d estados</item>
+    </plurals>
+    <string name="vd_statuses_not_deleted">Android no dejó borrar algunos estados de la galería, así que quedaron como estaban.</string>
+    <string name="vd_statuses_delete_failed">No se pudieron borrar algunos estados.</string>
+    <string name="vd_statuses_no_delete_access">Sin ese permiso no se pueden borrar los estados.</string>
+
+    <!-- Rediseño: piezas comunes -->
+    <string name="vd_nav_home">Inicio</string>
+    <string name="vd_nav_files">Archivos</string>
+    <string name="vd_nav_settings">Ajustes</string>
+    <string name="vd_files_in_progress">En curso</string>
+    <string name="vd_files_ready">Listos</string>
+    <string name="vd_accent_violet">Violeta</string>
+    <string name="vd_accent_turquoise">Turquesa</string>
+    <string name="vd_accent_pink">Rosa</string>
+    <string name="vd_accent_orange">Naranja</string>
+    <string name="vd_accent_lime">Lima</string>
+
+    <!-- Rediseño: Inicio y la hoja de descarga simple -->
+    <string name="vd_home_input_hint">Pega un enlace o busca</string>
+    <string name="vd_home_paste">Pegar</string>
+    <string name="vd_home_go">Ir</string>
+    <string name="vd_home_clear">Borrar</string>
+    <string name="vd_home_clipboard_one">Copiaste un enlace de %1$s</string>
+    <string name="vd_home_clipboard_many">Copiaste %1$d enlaces</string>
+    <string name="vd_home_use">Usar</string>
+    <string name="vd_home_not_now">Ahora no</string>
+    <string name="vd_tool_download_title">Descargar</string>
+    <string name="vd_tool_download_summary">Video o audio de cualquier página</string>
+    <string name="vd_tool_split_title">Dividir para estados</string>
+    <string name="vd_tool_split_summary">Partes de 30, 60 o 90 segundos</string>
+    <string name="vd_tool_split_short">Dividir</string>
+    <string name="vd_tool_statuses_title">Guardar estados</string>
+    <string name="vd_tool_statuses_summary">Los que ya viste en WhatsApp</string>
+    <string name="vd_tool_statuses_short">Estados</string>
+    <string name="vd_home_see_all">Ver todo</string>
+    <string name="vd_home_share_hint">También puedes tocar Compartir en cualquier app y elegir Video Downloader.</string>
+    <string name="vd_home_analyzing">Analizando el enlace…</string>
+    <string name="vd_home_failed_title">No se pudo leer el enlace</string>
+    <string name="vd_home_failed_default">No se encontró ningún video en ese enlace.</string>
+    <string name="vd_home_retry">Reintentar</string>
+    <string name="vd_home_download_anyway">Descargar igual</string>
+    <string name="vd_home_watch">Ver el video</string>
+    <string name="vd_task_downloading">Descargando · %1$d %%</string>
+    <string name="vd_task_starting">Preparando…</string>
+    <string name="vd_task_merging">Uniendo audio y video</string>
+    <string name="vd_task_converting">Convirtiendo el audio</string>
+    <string name="vd_task_paused">En pausa</string>
+    <string name="vd_task_waiting">En espera</string>
+    <string name="vd_task_speed">%1$s · faltan %2$s</string>
+    <string name="vd_sheet_video">Video</string>
+    <string name="vd_sheet_audio">Audio</string>
+    <string name="vd_sheet_quality">Calidad</string>
+    <string name="vd_quality_best">La mejor</string>
+    <string name="vd_quality_medium">Media</string>
+    <string name="vd_quality_light">Liviana</string>
+    <string name="vd_quality_highest">La más alta</string>
+    <string name="vd_sheet_format">Formato</string>
+    <string name="vd_audio_high">Alta · 320 kbps</string>
+    <string name="vd_audio_normal">Normal · 128 kbps</string>
+    <string name="vd_audio_cover">Agregar portada</string>
+    <string name="vd_audio_lyrics">Agregar letra</string>
+    <string name="vd_sheet_cut">Cortar un tramo</string>
+    <string name="vd_sheet_schedule">Programar</string>
+    <string name="vd_sheet_scheduled_for">Empieza %1$s</string>
+    <string name="vd_sheet_more">Más opciones</string>
+    <string name="vd_sheet_download_audio">Descargar audio</string>
+    <string name="vd_sheet_added">Agregado a Archivos</string>
+
+    <!-- Rediseño: Archivos -->
+    <string name="vd_files_search">Buscar</string>
+    <string name="vd_files_search_hint">Buscar en tus archivos</string>
+    <string name="vd_filter_all">Todo</string>
+    <string name="vd_filter_videos">Videos</string>
+    <string name="vd_filter_audio">Audio</string>
+    <string name="vd_filter_parts">Partes</string>
+    <string name="vd_filter_statuses">Estados</string>
+    <string name="vd_kind_part">Parte</string>
+    <string name="vd_kind_status">Estado</string>
+    <string name="vd_files_empty_title">Todavía no hay archivos</string>
+    <string name="vd_files_empty_summary">Pega un enlace en Inicio para empezar.</string>
+    <string name="vd_files_go_home">Ir a Inicio</string>
+    <string name="vd_files_none_of_kind">No hay archivos de este tipo.</string>
+    <string name="vd_files_missing">Ya no está en el celular</string>
+    <string name="vd_files_open">Abrir</string>
+    <string name="vd_files_share">Compartir</string>
+    <string name="vd_files_split">Dividir</string>
+    <string name="vd_files_copy_link">Copiar enlace</string>
+    <string name="vd_files_redownload">Volver a bajar</string>
+    <string name="vd_files_delete">Borrar</string>
+    <string name="vd_files_delete_confirm">¿Borrar «%1$s» del celular?</string>
+    <string name="vd_files_link_copied">Enlace copiado</string>
+    <string name="vd_files_cannot_open">Ninguna app del celular puede abrir este archivo.</string>
+
+    <!-- Rediseño: elegir varios archivos -->
+    <string name="vd_files_clear_selection">Salir de la selección</string>
+    <string name="vd_files_select_all">Elegir todos</string>
+    <string name="vd_files_delete_note">También se borran de la galería.</string>
+    <string name="vd_files_not_deleted">Android no dejó borrar algunos archivos.</string>
+    <plurals name="vd_files_selected">
+        <item quantity="one">%1$d elegido</item>
+        <item quantity="other">%1$d elegidos</item>
+    </plurals>
+    <plurals name="vd_files_delete_many_confirm">
+        <item quantity="one">¿Borrar %1$d archivo del celular?</item>
+        <item quantity="other">¿Borrar %1$d archivos del celular?</item>
+    </plurals>
+    <plurals name="vd_files_deleted">
+        <item quantity="one">Se borró %1$d archivo</item>
+        <item quantity="other">Se borraron %1$d archivos</item>
+    </plurals>
+
+    <!-- Rediseño: Ajustes -->
+    <string name="vd_back">Volver</string>
+    <string name="vd_set_appearance">Apariencia</string>
+    <string name="vd_set_appearance_summary">Tema, idioma e ícono</string>
+    <string name="vd_set_home">Inicio y búsqueda</string>
+    <string name="vd_set_home_summary">Buscador, portapapeles y gestos</string>
+    <string name="vd_set_downloads">Descargas</string>
+    <string name="vd_set_downloads_summary">Calidad, datos móviles y horarios</string>
+    <string name="vd_set_folders">Carpetas y nombres</string>
+    <string name="vd_set_folders_summary">Dónde se guardan los archivos</string>
+    <string name="vd_set_media">Video y audio</string>
+    <string name="vd_set_media_summary">Formatos, subtítulos y portadas</string>
+    <string name="vd_set_engine">Motor de descargas</string>
+    <string name="vd_set_engine_summary">Versión y actualizaciones</string>
+    <string name="vd_set_backup">Copia de seguridad</string>
+    <string name="vd_set_backup_summary">Guardar y recuperar tus ajustes</string>
+    <string name="vd_set_advanced">Avanzado</string>
+    <string name="vd_set_advanced_summary">Terminal, plantillas y registros</string>
+    <string name="vd_set_about">Acerca de</string>
+    <string name="vd_set_about_summary">Versión, licencia y privacidad</string>
+    <string name="vd_adv_tools">Herramientas</string>
+    <string name="vd_adv_templates">Plantillas de comandos</string>
+    <string name="vd_adv_logs">Registros</string>
+    <string name="vd_adv_watched">Canales vigilados</string>
+    <string name="vd_adv_more">Más ajustes avanzados</string>
+    <string name="vd_adv_more_summary">YouTube, red y formatos</string>
+    <string name="vd_adv_close_app">Cerrar la app</string>
+
+    <!-- Archivos › En curso (diseño 08-2 to 08-4) -->
+    <string name="vd_task_waiting_place">En espera · %1$s en la fila</string>
+    <string name="vd_ordinal_number">%1$d.º</string>
+    <string name="vd_queue_now">Ahora</string>
+    <string name="vd_queue_scheduled">Programados</string>
+    <string name="vd_queue_errors">Con error</string>
+    <string name="vd_queue_cancelled">Cancelados</string>
+    <string name="vd_queue_saved">Para después</string>
+    <string name="vd_queue_pause_all">Pausar todo</string>
+    <string name="vd_queue_resume_all">Reanudar todo</string>
+    <string name="vd_queue_cancel_all">Cancelar todo</string>
+    <string name="vd_queue_retry_all">Reintentar todos</string>
+    <string name="vd_queue_download_all">Bajar todos</string>
+    <string name="vd_queue_delete_all">Borrar todos</string>
+    <string name="vd_queue_pause">Pausar</string>
+    <string name="vd_queue_resume">Reanudar</string>
+    <string name="vd_queue_cancel">Cancelar</string>
+    <string name="vd_queue_retry">Reintentar</string>
+    <string name="vd_queue_detail">Ver detalle</string>
+    <string name="vd_queue_download_now">Bajar ahora</string>
+    <string name="vd_queue_move">Arrastra para cambiar el orden</string>
+    <string name="vd_queue_today_at">Hoy a las %1$s</string>
+    <string name="vd_queue_tomorrow_at">Mañana a las %1$s</string>
+    <string name="vd_queue_day_at">%1$s a las %2$s</string>
+    <string name="vd_queue_wifi_only">solo con Wi-Fi</string>
+    <string name="vd_queue_empty_now">No se está bajando nada</string>
+    <string name="vd_queue_empty_scheduled">No hay descargas programadas</string>
+    <string name="vd_queue_empty_errors">No hay descargas con error</string>
+    <string name="vd_queue_empty_cancelled">No hay descargas canceladas</string>
+    <string name="vd_queue_empty_saved">No guardaste nada para después</string>
+    <string name="vd_queue_cancel_all_confirm">¿Cancelar todas las descargas en curso y en espera? Puedes volver a bajarlas desde Cancelados.</string>
+    <string name="vd_queue_keep">Seguir bajando</string>
+    <string name="vd_queue_delete_all_confirm">¿Borrar todo lo de esta lista?</string>
+    <string name="vd_error_storage">No queda espacio en el celular.</string>
+    <string name="vd_error_folder">No se pudo guardar en la carpeta elegida.</string>
+    <string name="vd_error_unsupported">Este enlace no es compatible.</string>
+    <string name="vd_error_not_started">Todavía no empezó: es un estreno o una transmisión programada.</string>
+    <string name="vd_error_geo">No está disponible en tu país.</string>
+    <string name="vd_error_sign_in">El sitio no dejó bajarlo. Puede que pida iniciar sesión.</string>
+    <string name="vd_error_rate_limit">El sitio pidió esperar. Prueba más tarde.</string>
+    <string name="vd_error_format">La calidad elegida no está disponible.</string>
+    <string name="vd_error_processing">Se bajó, pero no se pudo convertir el archivo.</string>
+    <string name="vd_error_unavailable">El video ya no está disponible.</string>
+    <string name="vd_error_forbidden">El sitio rechazó la descarga.</string>
+    <string name="vd_error_network">Se cortó internet.</string>
+    <string name="vd_error_unknown">No se pudo bajar.</string>
+    <string-array name="vd_ordinals">
+        <item>primero</item>
+        <item>segundo</item>
+        <item>tercero</item>
+        <item>cuarto</item>
+        <item>quinto</item>
+        <item>sexto</item>
+        <item>séptimo</item>
+        <item>octavo</item>
+        <item>noveno</item>
+        <item>décimo</item>
+    </string-array>
+
+    <!-- Dividir para estados and Guardar estados, redesign (diseño 06-1 to 07-4) -->
+    <string name="vd_split_screen_title">Dividir para estados</string>
+    <string name="vd_split_which">¿Qué video quieres dividir?</string>
+    <string name="vd_split_paste_link">Pegar un enlace</string>
+    <string name="vd_split_from_gallery">Elegir de la galería</string>
+    <string name="vd_split_recent">Recientes</string>
+    <string name="vd_split_which_part">¿Qué parte del video?</string>
+    <string name="vd_split_quality">Calidad</string>
+    <string name="vd_split_quality_exact">Exacta (recomendada)</string>
+    <string name="vd_split_quality_quick">Rápida</string>
+    <string name="vd_split_do">Dividir</string>
+    <string name="vd_split_from_time">Desde %1$s</string>
+    <string name="vd_split_to_time">Hasta %1$s</string>
+    <string name="vd_split_range_short">Elige un tramo de al menos 1 segundo.</string>
+    <string name="vd_split_parts_last">%1$d partes de %2$s (la última, de %3$s)</string>
+    <string name="vd_split_parts_up_to">%1$d partes de hasta %2$s</string>
+    <string name="vd_split_step_open">Abriendo el video</string>
+    <string name="vd_split_step_prepare">Preparando para WhatsApp</string>
+    <string name="vd_split_step_cut">Dividiendo</string>
+    <string name="vd_split_step_save">Guardando en la galería</string>
+    <string name="vd_split_step_percent">%1$s · %2$d %%</string>
+    <string name="vd_split_keep_open">Deja esta pantalla abierta hasta que termine.</string>
+    <string name="vd_split_part_length">Parte %1$d · %2$s</string>
+    <string name="vd_split_gallery">Ver en la galería</string>
+    <string name="vd_split_share_hint">Al compartir, WhatsApp te deja elegir entre un chat o tu estado.</string>
+    <string name="vd_split_error_open">No se pudo abrir el video.</string>
+    <string name="vd_statuses_open_app">Abrir %1$s</string>
+    <plurals name="vd_split_parts_of">
+        <item quantity="one">%1$d parte de %2$s</item>
+        <item quantity="many">%1$d partes de %2$s</item>
+        <item quantity="other">%1$d partes de %2$s</item>
+    </plurals>
+
+    <!-- Dividir para estados in the background: the queue, its notifications and cancelling -->
+    <string name="vd_split_background_hint">Puedes salir de la app. Te avisamos cuando termine.</string>
+    <string name="vd_split_in_progress">En proceso</string>
+    <string name="vd_split_step_percent_left">%1$s · %2$d %% · faltan %3$s</string>
+    <string name="vd_split_cancel_title">¿Cancelar la división?</string>
+    <string name="vd_split_cancel_message">Se pierde lo que se lleva hecho de este video.</string>
+    <string name="vd_split_cancel_confirm">Sí, cancelar</string>
+    <string name="vd_split_cancel_keep">Seguir dividiendo</string>
+    <string name="vd_split_notif_working">Dividiendo «%1$s»</string>
+    <string name="vd_split_notif_failed">No se pudo dividir «%1$s»</string>
+    <string name="vd_split_channel_progress">Dividir para estados: en proceso</string>
+    <string name="vd_split_channel_done">Dividir para estados: terminados</string>
+    <plurals name="vd_split_notif_waiting">
+        <item quantity="one">%d más en la fila</item>
+        <item quantity="many">%d más en la fila</item>
+        <item quantity="other">%d más en la fila</item>
+    </plurals>
+
+    <!-- Ver en la TV (notas/screen-mirroring-funciones.md) -->
+    <string name="vd_tool_tv_title">Ver en la TV</string>
+    <string name="vd_tool_tv_summary">Muestra el celular en el televisor</string>
+    <string name="vd_tool_tv_short">En la TV</string>
+    <string name="vd_tv_step_wifi">Conecta el celular y la TV a la misma red Wi-Fi.</string>
+    <string name="vd_tv_step_tv">En la TV, activa «Screen mirroring» o «Miracast». Un Chromecast o una Google TV no necesitan nada.</string>
+    <string name="vd_tv_step_choose">Toca «Elegir TV» y elige tu televisor. Si Android pregunta qué transmitir, elige toda la pantalla o «Video Downloader». Después vuelve y reproduce el video desde aquí.</string>
+    <string name="vd_tv_choose">Elegir TV</string>
+    <string name="vd_tv_wifi">Abrir Wi-Fi</string>
+    <string name="vd_tv_play">Reproducir el video</string>
+    <string name="vd_tv_no_cast_screen">Este celular no tiene esa pantalla. Baja la barra de arriba y toca «Transmitir», «Smart View» o «Duplicar pantalla».</string>
+    <string name="vd_tv_stop_hint">Para dejar de verlo en la TV, vuelve a «Elegir TV» y toca «Desconectar».</string>
+    <string name="vd_files_open_with">Abrir con otra app</string>
+    <!-- Enviar a la TV, through LocalSend -->
+    <string name="vd_tv_send">Enviar a la TV</string>
+    <string name="vd_tv_send_searching">Buscando la tele…</string>
+    <string name="vd_tv_send_hint">En la tele tiene que estar abierto LocalSend, en el mismo Wi-Fi que este celular.</string>
+    <string name="vd_tv_send_none">No encontré ninguna tele con LocalSend abierto.</string>
+    <string name="vd_tv_send_retry">Buscar otra vez</string>
+    <string name="vd_tv_send_choose">Elige a qué tele enviarlo.</string>
+    <string name="vd_tv_send_waiting">Si en %1$s aparece un aviso de LocalSend, acéptalo con el control remoto.</string>
+    <string name="vd_tv_send_sending">Enviando a %1$s</string>
+    <string name="vd_tv_send_progress">%1$s de %2$s</string>
+    <string name="vd_tv_send_done_title">¡Listo! Quedó en la tele</string>
+    <string name="vd_tv_send_done">Para verlo, abre VLC en la tele y entra en Video.</string>
+    <string name="vd_tv_send_rejected">En la tele lo rechazaron.</string>
+    <string name="vd_tv_send_busy">La tele está recibiendo otra cosa. Prueba de nuevo en un momento.</string>
+    <string name="vd_tv_send_pin">La tele pide un PIN. Desactiva «Requerir PIN» en los ajustes de LocalSend de la tele.</string>
+    <string name="vd_tv_send_failed">Se cortó la conexión con la tele. Comprueba que LocalSend siga abierto allí.</string>
+    <!-- Full download sheet ("Más opciones") -->
+    <string name="vd_more_file">Archivo</string>
+    <string name="vd_more_quality">Calidad</string>
+    <string name="vd_more_folder">Carpeta</string>
+    <string name="vd_more_add">Agregar al archivo</string>
+    <string name="vd_more_edit">Editar antes de bajar</string>
+    <string name="vd_more_advanced">Avanzado</string>
+    <string name="vd_more_cover">Portada</string>
+    <string name="vd_more_chapters">Capítulos</string>
+    <string name="vd_more_subtitles">Subtítulos</string>
+    <string name="vd_more_sponsorblock">Saltar publicidad del youtuber</string>
+    <string name="vd_more_lyrics">Letra de la canción</string>
+    <string name="vd_more_split_chapters">Un archivo por capítulo</string>
+    <string name="vd_more_cut">Cortar un tramo</string>
+    <string name="vd_more_crop">Recortar la imagen</string>
+    <string name="vd_more_recode">Cambiar el formato del video</string>
+    <string name="vd_more_sound">Sonido</string>
+    <string name="vd_more_remove_sound">Quitar el sonido</string>
+    <string name="vd_more_bitrate">Calidad del audio</string>
+    <string name="vd_more_live">Transmisión en vivo</string>
+    <string name="vd_more_file_name">Nombre del archivo</string>
+    <string name="vd_more_extra_commands">Comandos extra</string>
+    <string name="vd_more_cover_embed">Ponerla dentro del archivo</string>
+    <string name="vd_more_cover_save">Guardarla aparte como imagen</string>
+    <string name="vd_more_cover_crop">Recortarla cuadrada</string>
+    <string name="vd_set_general_page">Apariencia y búsqueda</string>
+    <string name="vd_set_versions">Versiones</string>
+    <string name="vd_set_when_downloading">Al descargar</string>
+    <!-- Avanzado, only for experts -->
+    <string name="vd_expert_title">Opciones para expertos</string>
+    <string name="vd_expert_text">Aquí están la terminal, las plantillas de comandos, los registros y los ajustes internos del motor de descargas. Si cambias algo sin saber qué hace, algunas descargas pueden dejar de funcionar.</string>
+    <string name="vd_expert_risk">Las usas bajo tu propio riesgo</string>
+    <string name="vd_expert_reset_hint">Si algo sale mal, vuelve aquí y toca «Restablecer opciones avanzadas»: todo vuelve a como venía con la app.</string>
+    <string name="vd_expert_button">Soy experto, muéstrame las opciones avanzadas</string>
+    <string name="vd_expert_reset">Restablecer opciones avanzadas</string>
+    <string name="vd_expert_reset_summary">Vuelven a como venían con la app</string>
+    <string name="vd_expert_reset_confirm_title">¿Restablecer las opciones avanzadas?</string>
+    <string name="vd_expert_reset_confirm_text">Los ajustes avanzados vuelven a como venían con la app. Tus archivos y tus descargas no se tocan.</string>
+    <string name="vd_expert_reset_done">Listo: las opciones avanzadas volvieron a como venían</string>
+    <string name="vd_expert_hide">Ocultar las opciones avanzadas</string>
+</resources>

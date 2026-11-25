@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- What to add to the file and what to edit before downloading, as grouped rows (the user found the old rows of
+     chips crowded and mixed on 24/11/2026). Ids are kept: UiUtil.configureVideo finds these Chips by id. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adjust"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        style="@style/Widget.VideoDownloader.OptionSection"
+        android:text="@string/vd_more_add" />
+
+    <LinearLayout style="@style/Widget.VideoDownloader.OptionGroup">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/thumbnail"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_image"
+            android:text="@string/vd_more_cover" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chapters"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_chapters"
+            android:text="@string/vd_more_chapters" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/adjust_subtitles"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_subtitles"
+            android:text="@string/vd_more_subtitles" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sponsorblock_filters"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_money"
+            android:text="@string/vd_more_sponsorblock" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/Widget.VideoDownloader.OptionSection"
+        android:text="@string/vd_more_edit" />
+
+    <LinearLayout style="@style/Widget.VideoDownloader.OptionGroup">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cut"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_cut"
+            android:text="@string/vd_more_cut" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/crop"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_crop"
+            android:text="@string/vd_more_crop" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/recode_video"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/baseline_video_metadata"
+            android:text="@string/vd_more_recode" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/adjust_audio"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_music"
+            android:text="@string/vd_more_sound" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/remove_audio"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/baseline_music_off_24"
+            android:text="@string/vd_more_remove_sound"
+            android:checkable="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/Widget.VideoDownloader.OptionSection"
+        android:text="@string/vd_more_advanced" />
+
+    <LinearLayout style="@style/Widget.VideoDownloader.OptionGroup">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/adjust_live_stream"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/baseline_live_tv_24"
+            android:text="@string/vd_more_live" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filename_template"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_edit"
+            android:text="@string/vd_more_file_name" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/extra_commands"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_terminal"
+            android:text="@string/vd_more_extra_commands" />
+    </LinearLayout>
+
+</LinearLayout>

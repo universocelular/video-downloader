@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Video Downloader: versión de yt-dlp que viaja dentro de la app (res/raw/ytdlp).
+     La escribe scripts/actualizar-yt-dlp-incluido.sh; no editar a mano. -->
+<resources>
+    <string name="bundled_ytdlp_version" translatable="false">2026.10.26</string>
+</resources>

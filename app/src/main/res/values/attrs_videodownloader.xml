@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Readable tone of the main color for text and icons on the background; colorPrimary stays the fill color. -->
+    <attr name="vdColorPrimaryText" format="color" />
+</resources>

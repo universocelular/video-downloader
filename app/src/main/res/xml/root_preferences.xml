@@ -1,0 +1,125 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+        android:key="appearance"
+        app:icon="@drawable/vd_setting_advanced"
+        android:title="@string/general"/>
+
+    <Preference
+        android:key="folders"
+        app:icon="@drawable/vd_setting_folders"
+        android:title="@string/directories"/>
+
+    <Preference
+        android:key="downloading"
+        app:icon="@drawable/vd_setting_downloads"
+        android:title="@string/downloads"/>
+
+    <Preference
+        android:key="processing"
+        app:icon="@drawable/vd_pref_stars"
+        android:title="@string/processing"/>
+
+    <Preference
+        android:key="updating"
+        app:icon="@drawable/vd_setting_engine"
+        android:title="@string/updating"/>
+
+    <Preference
+        android:key="advanced"
+        app:icon="@drawable/vd_pref_chip"
+        android:title="@string/advanced"/>
+
+    <PreferenceCategory android:title="@string/backup_restore">
+        <Preference
+            app:icon="@drawable/vd_pref_save"
+            app:key="backup"
+            app:title="@string/backup"/>
+
+        <Preference
+            app:icon="@drawable/vd_setting_backup"
+            app:key="restore"
+            app:title="@string/restore"/>
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/vd_pref_clock"
+            app:key="automatic_backup"
+            android:summary="@string/automatic_backup_summary"
+            app:title="@string/automatic_backup" />
+
+        <Preference
+            app:icon="@drawable/vd_setting_folders"
+            android:summary=""
+            app:key="backup_path"
+            app:title="@string/backup_path" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/about" >
+        <Preference
+            app:icon="@drawable/vd_setting_close"
+            app:key="package_name"
+            app:title="@string/package_name" />
+        <Preference
+            app:icon="@drawable/ic_discord"
+            app:key="discord"
+            app:isPreferenceVisible="false"
+            app:summary="https://discord.gg/WW3KYWxAPm"
+            app:title="Discord">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://discord.gg/WW3KYWxAPm" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/ic_telegram"
+            app:key="telegram"
+            app:isPreferenceVisible="false"
+            app:summary="https://t.me/ytdlnis"
+            app:title="Telegram">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/ytdlnis" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/vd_pref_language"
+            app:key="translators"
+            app:summary="@string/translators_summary"
+            app:title="@string/translators" />
+
+        <Preference
+            app:icon="@drawable/vd_pref_shield"
+            app:key="security"
+            app:summary="@string/vd_privacy_summary"
+            app:title="@string/security" />
+
+        <Preference
+            app:icon="@drawable/vd_pref_document"
+            app:key="license"
+            app:summary="GNU General Public License v3.0"
+            app:title="@string/license">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/deniscerri/ytdlnis/blob/main/LICENSE" />
+        </Preference>
+
+        <Preference
+            app:icon="@drawable/vd_pref_code"
+            app:key="rreth"
+            app:summary="@string/vd_based_on"
+            app:allowDividerBelow="true"
+            app:title="@string/source_code">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/deniscerri/ytdlnis" />
+        </Preference>
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

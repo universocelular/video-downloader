@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    Video Downloader installs its own updates from its GitHub releases (UpdateUtil.RELEASES_REPO), so this build asks
+        to install packages too, as the github one does. -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+</manifest>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Made by scripts/iconos-ajustes.py: a full-color settings icon in the style of the Ajustes rows. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path
+        android:pathData="M14,7 L34,7 A5,5 0 0 1 39,12 L39,39 A5,5 0 0 1 34,44 L14,44 A5,5 0 0 1 9,39 L9,12 A5,5 0 0 1 14,7 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="7" android:endX="24" android:endY="44">
+                <item android:color="#A1887F" android:offset="0" />
+                <item android:color="#6D4C41" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M16,12 L32,12 A3,3 0 0 1 35,15 L35,37 A3,3 0 0 1 32,40 L16,40 A3,3 0 0 1 13,37 L13,15 A3,3 0 0 1 16,12 Z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M20,4 L28,4 A3,3 0 0 1 31,7 L31,9 A3,3 0 0 1 28,12 L20,12 A3,3 0 0 1 17,9 L17,7 A3,3 0 0 1 20,4 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="24" android:startY="4" android:endX="24" android:endY="12">
+                <item android:color="#CFD8DC" android:offset="0" />
+                <item android:color="#90A4AE" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M17.3,18 L30.7,18 A1.3,1.3 0 0 1 32,19.3 L32,19.3 A1.3,1.3 0 0 1 30.7,20.6 L17.3,20.6 A1.3,1.3 0 0 1 16,19.3 L16,19.3 A1.3,1.3 0 0 1 17.3,18 Z"
+        android:fillColor="#B0BEC5" />
+    <path
+        android:pathData="M17.3,24 L30.7,24 A1.3,1.3 0 0 1 32,25.3 L32,25.3 A1.3,1.3 0 0 1 30.7,26.6 L17.3,26.6 A1.3,1.3 0 0 1 16,25.3 L16,25.3 A1.3,1.3 0 0 1 17.3,24 Z"
+        android:fillColor="#B0BEC5" />
+    <path
+        android:pathData="M17.3,30 L30.7,30 A1.3,1.3 0 0 1 32,31.3 L32,31.3 A1.3,1.3 0 0 1 30.7,32.6 L17.3,32.6 A1.3,1.3 0 0 1 16,31.3 L16,31.3 A1.3,1.3 0 0 1 17.3,30 Z"
+        android:fillColor="#B0BEC5" />
+</vector>

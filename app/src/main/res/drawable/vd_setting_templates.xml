@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Plantillas: a page with a folded corner, in full color as the user asked for Ajustes (03/11/2026). -->
+    <path
+        android:pathData="M11,5 L29,5 L38,14 L38,40 A3,3 0 0 1 35,43 L11,43 A3,3 0 0 1 8,40 L8,8 A3,3 0 0 1 11,5 Z"
+        android:strokeColor="#8CC4F7"
+        android:strokeWidth="1.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="23" android:startY="5" android:endX="23" android:endY="43">
+                <item android:color="#FFFFFF" android:offset="0" />
+                <item android:color="#E3F0FF" android:offset="1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:pathData="M29,5 L29,11.5 A2.5,2.5 0 0 0 31.5,14 L38,14 Z"
+        android:fillColor="#8CC4F7" />
+    <path
+        android:pathData="M13.5,21 L32.5,21 M13.5,26.5 L32.5,26.5 M13.5,32 L27,32"
+        android:strokeColor="#3D9BF0"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M14.7,35.5 L21.3,35.5 A1.2,1.2 0 0 1 22.5,36.7 L22.5,38.3 A1.2,1.2 0 0 1 21.3,39.5 L14.7,39.5 A1.2,1.2 0 0 1 13.5,38.3 L13.5,36.7 A1.2,1.2 0 0 1 14.7,35.5 Z"
+        android:fillColor="#FFB547" />
+</vector>

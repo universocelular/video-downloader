@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- What to add to the file and what to edit before downloading, as grouped rows (the user found the old rows of
+     chips crowded and mixed on 24/11/2026). Ids are kept: UiUtil.configureAudio finds these Chips by id. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adjust"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingBottom="8dp">
+
+    <TextView
+        style="@style/Widget.VideoDownloader.OptionSection"
+        android:text="@string/vd_more_add" />
+
+    <LinearLayout style="@style/Widget.VideoDownloader.OptionGroup">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/thumbnail"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_image"
+            android:text="@string/vd_more_cover" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/lyrics"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_lyrics"
+            android:text="@string/vd_more_lyrics" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sponsorblock_filters"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_money"
+            android:text="@string/vd_more_sponsorblock" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/Widget.VideoDownloader.OptionSection"
+        android:text="@string/vd_more_edit" />
+
+    <LinearLayout style="@style/Widget.VideoDownloader.OptionGroup">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cut"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_cut"
+            android:text="@string/vd_more_cut" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/split_by_chapters"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_chapters"
+            android:text="@string/vd_more_split_chapters"
+            android:checkable="true" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/audio_bitrate"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/baseline_high_quality_24"
+            android:text="@string/vd_more_bitrate" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/Widget.VideoDownloader.OptionSection"
+        android:text="@string/vd_more_advanced" />
+
+    <LinearLayout style="@style/Widget.VideoDownloader.OptionGroup">
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filename_template"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_edit"
+            android:text="@string/vd_more_file_name" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/extra_commands"
+            style="@style/Widget.VideoDownloader.OptionRow"
+            app:chipIcon="@drawable/ic_terminal"
+            android:text="@string/vd_more_extra_commands" />
+    </LinearLayout>
+
+</LinearLayout>

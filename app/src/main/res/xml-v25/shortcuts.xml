@@ -1,0 +1,64 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="search"
+        android:enabled="true"
+        android:icon="@drawable/vd_shortcut_search"
+        android:shortcutShortLabel="@string/search"
+        android:shortcutDisabledMessage="@string/search">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.estadolisto.app"
+            android:targetClass="com.deniscerri.ytdl.MainActivity">
+
+            <extra android:name="destination" android:value="Search" />
+
+        </intent>
+    </shortcut>
+
+
+    <shortcut
+        android:shortcutId="downloads"
+        android:enabled="true"
+        android:icon="@drawable/vd_shortcut_files"
+        android:shortcutShortLabel="@string/vd_nav_files"
+        android:shortcutDisabledMessage="@string/vd_nav_files">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.estadolisto.app"
+            android:targetClass="com.deniscerri.ytdl.MainActivity">
+
+            <extra android:name="destination" android:value="Downloads" />
+
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="queue"
+        android:enabled="true"
+        android:icon="@drawable/vd_shortcut_in_progress"
+        android:shortcutShortLabel="@string/vd_files_in_progress"
+        android:shortcutDisabledMessage="@string/vd_files_in_progress">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.estadolisto.app"
+            android:targetClass="com.deniscerri.ytdl.MainActivity">
+
+            <extra android:name="destination" android:value="Queue" />
+
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="terminal"
+        android:enabled="true"
+        android:icon="@drawable/vd_shortcut_terminal"
+        android:shortcutShortLabel="@string/terminal"
+        android:shortcutDisabledMessage="@string/terminal">
+        <intent
+            android:action="android.intent.category.DEFAULT"
+            android:targetPackage="com.estadolisto.app"
+            android:targetClass="com.deniscerri.ytdl.ui.more.terminal.TerminalActivity">
+
+        </intent>
+    </shortcut>
+</shortcuts>

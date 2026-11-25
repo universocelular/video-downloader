@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/appearance">
+        <Preference
+            android:icon="@drawable/vd_pref_language"
+            app:key="app_language"
+            app:persistent="false"
+            app:summary=""
+            app:title="@string/language" />
+
+        <ListPreference
+            android:entries="@array/themes"
+            android:entryValues="@array/themes_values"
+            android:icon="@drawable/vd_pref_theme"
+            app:defaultValue="System"
+            app:key="ytdlnis_theme"
+            app:summary="@string/defaultValue"
+            app:title="@string/Theme" />
+
+        <Preference
+            android:defaultValue="default"
+            android:icon="@drawable/vd_pref_appicon"
+            android:title="@string/app_icon"
+            android:summary="@string/defaultValue"
+            app:key="ytdlnis_icon" />
+
+        <ListPreference
+            android:entries="@array/accents"
+            android:entryValues="@array/accents_values"
+            android:icon="@drawable/vd_setting_appearance"
+            app:defaultValue="violet"
+            app:key="theme_accent"
+            app:title="@string/accents" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/vd_pref_contrast"
+            android:key="high_contrast"
+            app:summary="@string/pure_theme_summary"
+            app:title="@string/high_contrast" />
+
+
+        <MultiSelectListPreference
+            app:icon="@drawable/vd_pref_image_off"
+            app:dialogTitle="@string/hide_thumbnails"
+            app:entries="@array/hide_thumbnail"
+            app:entryValues="@array/hide_thumbnail_values"
+            app:key="hide_thumbnails"
+            app:title="@string/hide_thumbnails" />
+
+        <MultiSelectListPreference
+            app:icon="@drawable/vd_pref_card"
+            android:dialogTitle="@string/modify_download_card"
+            android:entries="@array/modify_download_card"
+            android:entryValues="@array/modify_download_card_values"
+            android:defaultValue="@array/modify_download_card_values"
+            app:key="modify_download_card"
+            app:title="@string/modify_download_card" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/vd_pref_layers"
+            android:key="display_over_apps"
+            app:isPreferenceVisible="false"
+            app:summary="@string/display_over_apps_summary"
+            app:title="@string/display_over_apps" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="YouTube">
+        <ListPreference
+            android:icon="@drawable/vd_pref_heart"
+            android:key="recommendations_home"
+            android:defaultValue=""
+            android:entries="@array/video_recommendations"
+            android:entryValues="@array/video_recommnedations_values"
+            app:summary="@string/video_recommendations_summary"
+            app:title="@string/video_recommendations" />
+
+        <EditTextPreference
+            android:icon="@drawable/vd_pref_heart"
+            app:key="custom_home_recommendation_url"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            android:icon="@drawable/vd_pref_key"
+            app:key="api_key"
+            android:summary="@string/api_key_summary"
+            app:title="@string/api_key" />
+
+        <ListPreference
+            android:defaultValue="YT_DLP"
+            android:entries="@array/data_fetching_extractor_youtube"
+            android:entryValues="@array/data_fetching_extractor_youtube_values"
+            android:icon="@drawable/vd_setting_home"
+            app:key="youtube_data_fetching_extractor"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/data_fetching_extractor_youtube" />
+
+        <ListPreference
+            android:defaultValue="yt-dlp"
+            android:entries="@array/formats_source"
+            android:entryValues="@array/formats_source_values"
+            android:icon="@drawable/vd_setting_home"
+            app:key="formats_source"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/format_source" />
+
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            app:icon="@drawable/vd_pref_quote"
+            app:key="use_itemurl_instead_playlisturl"
+            app:summary="@string/use_item_url_not_playlist_summary"
+            app:title="@string/use_item_url_not_playlist" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/misc">
+        <ListPreference
+            android:defaultValue="share"
+            android:entries="@array/history_quick_action_entries"
+            android:entryValues="@array/history_quick_action_values"
+            app:icon="@drawable/vd_pref_pencil"
+            app:useSimpleSummaryProvider="true"
+            app:key="history_quick_action"
+            app:title="@string/history_quick_action" />
+
+        <ListPreference
+            android:defaultValue=""
+            android:entries="@array/countries"
+            android:entryValues="@array/countries_values"
+            app:icon="@drawable/vd_pref_language"
+            app:useSimpleSummaryProvider="true"
+            app:key="locale"
+            app:title="@string/preferred_locale" />
+
+        <ListPreference
+            android:defaultValue="always"
+            android:entries="@array/label_visibility"
+            android:entryValues="@array/label_visibility_values"
+            android:icon="@drawable/vd_pref_eye"
+            app:key="label_visibility"
+            app:useSimpleSummaryProvider="true"
+            app:title="@string/label_visibility" />
+
+        <ListPreference
+            android:defaultValue="ytsearch"
+            android:entries="@array/search_engines"
+            android:entryValues="@array/search_engines_values"
+            android:icon="@drawable/vd_setting_home"
+            app:key="search_engine"
+            app:summary="@string/preferred_search_engine_summary"
+            app:title="@string/preferred_search_engine" />
+
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            app:icon="@drawable/vd_pref_clipboard"
+            app:key="check_clipboard_home"
+            app:summary="@string/check_clipboard_home_summary"
+            app:title="@string/check_clipboard_home" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/vd_setting_home"
+            android:key="search_suggestions"
+            app:summary="@string/search_suggestions_summary"
+            app:title="@string/search_suggestions" />
+
+        <MultiSelectListPreference
+            android:icon="@drawable/vd_pref_hand"
+            android:key="swipe_gesture"
+            android:entries="@array/swipe_gestures"
+            android:entryValues="@array/swipe_gestures_values"
+            android:defaultValue="@array/swipe_gestures_values"
+            app:summary="@string/swipe_gestures_summary"
+            app:title="@string/swipe_gestures" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            android:icon="@drawable/vd_pref_hand"
+            android:key="swipe_gestures_download_card"
+            app:title="@string/swipe_gestures_download_card" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/vd_pref_share"
+            android:key="show_terminal"
+            app:title="@string/show_terminal" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="false"
+            android:icon="@drawable/vd_pref_share"
+            android:key="show_quick_download_share"
+            app:title="@string/show_quick_download_share_menu" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            android:icon="@drawable/vd_pref_numbers"
+            android:key="show_count_downloads"
+            app:title="@string/show_download_count" />
+
+        <SwitchPreferenceCompat
+            android:widgetLayout="@layout/preferece_material_switch"
+            app:defaultValue="true"
+            android:icon="@drawable/vd_pref_numbers"
+            android:key="write_ytdlp_terminal"
+            app:title="@string/write_ytdlp_terminal" />
+
+
+        <Preference
+            app:icon="@drawable/vd_pref_battery"
+            app:key="ignore_battery"
+            app:title="@string/ignore_battery_optimization" />
+
+        <Preference
+            app:icon="@drawable/vd_pref_reset"
+            app:key="reset_preferences"
+            android:summary="@string/reset_preferences_in_screen"
+            app:title="@string/reset" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
