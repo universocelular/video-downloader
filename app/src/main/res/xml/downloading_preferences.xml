@@ -9,24 +9,24 @@
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_incognito"
             android:key="incognito"
-            app:summary="@string/incognito_summary"
-            app:title="@string/incognito" />
+            app:summary="@string/vd_p_incognito_s"
+            app:title="@string/vd_p_incognito" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="true"
             android:icon="@drawable/vd_pref_card"
             android:key="download_card"
-            app:summary="@string/download_card_summary"
-            app:title="@string/show_download_card" />
+            app:summary="@string/vd_p_download_card_s"
+            app:title="@string/vd_p_download_card" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_speed"
             android:key="quick_download"
-            app:summary="@string/quick_download_summary"
-            app:title="@string/quick_download_title" />
+            app:summary="@string/vd_p_quick_download_s"
+            app:title="@string/vd_p_quick_download" />
         
         <ListPreference
             android:defaultValue="url_type"
@@ -35,36 +35,36 @@
             android:icon="@drawable/vd_pref_box"
             app:key="prevent_duplicate_downloads"
             app:useSimpleSummaryProvider="true"
-            app:title="@string/prevent_duplicate_downloads" />
+            app:title="@string/vd_p_prevent_duplicate_downloads" />
 
         <Preference
             android:defaultValue="0-0"
             android:icon="@drawable/vd_pref_clock"
             app:key="download_delay"
-            android:summary="@string/download_delay_summary"
-            app:title="@string/download_delay" />
+            android:summary="@string/vd_p_download_delay_s"
+            app:title="@string/vd_p_download_delay" />
 
         <Preference
             android:defaultValue=""
             app:icon="@drawable/vd_pref_box"
             app:key="download_archive_path"
-            app:title="@string/download_archive_folder" />
+            app:title="@string/vd_p_download_archive_path" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="true"
             android:icon="@drawable/vd_pref_wifi"
             android:key="metered_networks"
-            app:summary="@string/download_over_metered_networks_summary"
-            app:title="@string/download_over_metered_networks" />
+            app:summary="@string/vd_p_metered_networks_s"
+            app:title="@string/vd_p_metered_networks" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_network"
             android:key="force_ipv4"
-            app:summary="@string/force_ipv4_desc"
-            app:title="@string/force_ipv4" />
+            app:summary="@string/vd_p_force_ipv4_s"
+            app:title="@string/vd_p_force_ipv4" />
 
 
         <SwitchPreferenceCompat
@@ -73,14 +73,14 @@
             android:icon="@drawable/vd_pref_cookie"
             android:key="use_cookies"
             app:isPreferenceVisible="false"
-            app:title="@string/use_cookies" />
+            app:title="@string/vd_p_use_cookies" />
 
         <EditTextPreference
             android:icon="@drawable/vd_pref_shield"
             app:key="proxy"
             app:defaultValue=""
-            app:summary="@string/socks5_proxy_summary"
-            app:title="@string/socks5_proxy" />
+            app:summary="@string/vd_p_proxy_s"
+            app:title="@string/vd_p_proxy" />
 
         <ListPreference
             android:defaultValue="auto"
@@ -88,16 +88,16 @@
             android:entryValues="@array/download_types_values"
             android:icon="@drawable/vd_setting_downloads"
             app:key="preferred_download_type"
-            app:summary="@string/preferred_download_type_summary"
-            app:title="@string/preferred_download_type" />
+            app:summary="@string/vd_p_preferred_download_type_s"
+            app:title="@string/vd_p_preferred_download_type" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_setting_downloads"
             android:key="remember_download_type"
-            app:summary="@string/remember_download_type_summary"
-            app:title="@string/remember_download_type" />
+            app:summary="@string/vd_p_remember_download_type_s"
+            app:title="@string/vd_p_remember_download_type" />
 
         <Preference
             android:defaultValue="video"
@@ -111,8 +111,8 @@
             app:key="concurrent_fragments"
             app:min="1"
             app:showSeekBarValue="true"
-            app:summary="@string/concurrent_fragments_summary"
-            app:title="@string/concurrent_fragments" />
+            app:summary="@string/vd_p_concurrent_fragments_s"
+            app:title="@string/vd_p_concurrent_fragments" />
 
         <SeekBarPreference
             android:defaultValue="1"
@@ -121,26 +121,26 @@
             app:key="concurrent_downloads"
             app:min="1"
             app:showSeekBarValue="true"
-            app:summary="@string/concurrent_downloads_summary"
-            app:title="@string/concurrent_downloads" />
+            app:summary="@string/vd_p_concurrent_downloads_s"
+            app:title="@string/vd_p_concurrent_downloads" />
 
         <EditTextPreference
             android:icon="@drawable/vd_pref_speed"
             app:key="limit_rate"
-            app:summary="@string/limit_rate_summary"
-            app:title="@string/limit_rate" />
+            app:summary="@string/vd_p_limit_rate_s"
+            app:title="@string/vd_p_limit_rate" />
 
         <EditTextPreference
             android:icon="@drawable/vd_pref_chip"
             app:key="buffer_size"
-            app:summary="@string/buffer_size_summary"
-            app:title="@string/buffer_size" />
+            app:summary="@string/vd_p_buffer_size_s"
+            app:title="@string/vd_p_buffer_size" />
 
         <EditTextPreference
             android:icon="@drawable/vd_pref_clock"
             app:key="socket_timeout"
-            android:summary="@string/socket_timeout_description"
-            app:title="@string/socket_timeout"/>
+            android:summary="@string/vd_p_socket_timeout_s"
+            app:title="@string/vd_p_socket_timeout"/>
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
@@ -156,8 +156,8 @@
             app:defaultValue="false"
             android:icon="@drawable/vd_setting_logs"
             android:key="log_downloads"
-            app:summary="@string/log_downloads_summary"
-            app:title="@string/log_downloads" />
+            app:summary="@string/vd_p_log_downloads_s"
+            app:title="@string/vd_p_log_downloads" />
 
         <ListPreference
             android:defaultValue=""
@@ -166,31 +166,31 @@
             android:icon="@drawable/vd_pref_folder_x"
             app:key="cleanup_leftover_downloads"
             app:useSimpleSummaryProvider="true"
-            app:title="@string/cleanup_leftover_downloads" />
+            app:title="@string/vd_p_cleanup_leftover_downloads" />
 
         <EditTextPreference
             app:key="retries"
             android:icon="@drawable/vd_pref_retry"
             android:defaultValue=""
             app:useSimpleSummaryProvider="true"
-            app:title="@string/retries" />
+            app:title="@string/vd_p_retries" />
 
         <EditTextPreference
             app:key="fragment_retries"
             android:icon="@drawable/vd_pref_retry"
             android:defaultValue=""
             app:useSimpleSummaryProvider="true"
-            app:title="@string/fragment_retries" />
+            app:title="@string/vd_p_fragment_retries" />
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="@string/scheduling">
+    <PreferenceCategory app:title="@string/vd_ps_scheduling">
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_clock"
             android:key="use_alarm_for_scheduling"
-            android:summary="@string/use_alarm_manager_summary"
-            app:title="@string/use_alarm_manager" />
+            android:summary="@string/vd_p_use_alarm_for_scheduling_s"
+            app:title="@string/vd_p_use_alarm_for_scheduling" />
 
 
         <SwitchPreferenceCompat
@@ -198,18 +198,18 @@
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_clock"
             android:key="use_scheduler"
-            app:title="@string/use_scheduler" />
+            app:title="@string/vd_p_use_scheduler" />
 
         <Preference
             android:icon="@drawable/vd_pref_clock"
-            app:title="@string/start"
+            app:title="@string/vd_p_schedule_start"
             app:defaultValue="00:00"
             app:summary="12:00"
             android:key="schedule_start"
         />
 
         <Preference
-            app:title="@string/end"
+            app:title="@string/vd_p_schedule_end"
             android:icon="@drawable/vd_pref_clock"
             app:defaultValue="05:00"
             app:summary="05:00"
@@ -225,8 +225,8 @@
     <Preference
         app:icon="@drawable/vd_pref_reset"
         app:key="reset_preferences"
-        android:summary="@string/reset_preferences_in_screen"
-        app:title="@string/reset" />
+        android:summary="@string/vd_p_reset_preferences_s"
+        app:title="@string/vd_p_reset_preferences" />
 
 
 </PreferenceScreen>

@@ -391,4 +391,9 @@
     <string name="vd_expert_reset_confirm_text">The advanced settings go back to how they came with the app. Your files and downloads are not touched.</string>
     <string name="vd_expert_reset_done">Done: the advanced options are back to how they came</string>
     <string name="vd_expert_hide">Hide the advanced options</string>
+    <string name="vd_expert_show">Show advanced options</string>
+    <string name="vd_expert_show_summary">For experts: more settings on every screen</string>
+    <string name="vd_expert_hide_summary">Show only the basics again</string>
+    <string name="vd_expert_button_short">I\'m an expert, show them</string>
+    <string name="vd_expert_page_reset_hint">If something goes wrong, tap “Reset this screen” and everything goes back to how it came.</string>
 </resources>

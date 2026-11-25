@@ -104,6 +104,7 @@ abstract class BaseSettingsFragment : PreferenceFragmentCompat(), SettingHost {
     }
 
     override fun onCreateAdapter(preferenceScreen: PreferenceScreen): RecyclerView.Adapter<*> {
+        BasicSettings.apply(preferenceScreen, requireContext())
         preferenceScreen.prepareForCards(requireContext())
         return GroupedPreferenceAdapter(preferenceScreen)
     }

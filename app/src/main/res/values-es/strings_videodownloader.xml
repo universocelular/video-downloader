@@ -469,4 +469,9 @@
     <string name="vd_expert_reset_confirm_text">Los ajustes avanzados vuelven a como venían con la app. Tus archivos y tus descargas no se tocan.</string>
     <string name="vd_expert_reset_done">Listo: las opciones avanzadas volvieron a como venían</string>
     <string name="vd_expert_hide">Ocultar las opciones avanzadas</string>
+    <string name="vd_expert_show">Mostrar opciones avanzadas</string>
+    <string name="vd_expert_show_summary">Para expertos: más ajustes en todas las pantallas</string>
+    <string name="vd_expert_hide_summary">Vuelve a mostrar solo lo básico</string>
+    <string name="vd_expert_button_short">Soy experto, mostrar</string>
+    <string name="vd_expert_page_reset_hint">Si algo sale mal, toca «Restablecer esta pantalla» y todo vuelve a como venía.</string>
 </resources>

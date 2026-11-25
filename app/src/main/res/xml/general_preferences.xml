@@ -2,13 +2,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory android:title="@string/appearance">
+    <PreferenceCategory android:title="@string/vd_ps_appearance">
         <Preference
             android:icon="@drawable/vd_pref_language"
             app:key="app_language"
             app:persistent="false"
             app:summary=""
-            app:title="@string/language" />
+            app:title="@string/vd_p_app_language" />
 
         <ListPreference
             android:entries="@array/themes"
@@ -17,12 +17,12 @@
             app:defaultValue="System"
             app:key="ytdlnis_theme"
             app:summary="@string/defaultValue"
-            app:title="@string/Theme" />
+            app:title="@string/vd_p_ytdlnis_theme" />
 
         <Preference
             android:defaultValue="default"
             android:icon="@drawable/vd_pref_appicon"
-            android:title="@string/app_icon"
+            android:title="@string/vd_p_ytdlnis_icon"
             android:summary="@string/defaultValue"
             app:key="ytdlnis_icon" />
 
@@ -32,15 +32,15 @@
             android:icon="@drawable/vd_setting_appearance"
             app:defaultValue="violet"
             app:key="theme_accent"
-            app:title="@string/accents" />
+            app:title="@string/vd_p_theme_accent" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_contrast"
             android:key="high_contrast"
-            app:summary="@string/pure_theme_summary"
-            app:title="@string/high_contrast" />
+            app:summary="@string/vd_p_high_contrast_s"
+            app:title="@string/vd_p_high_contrast" />
 
 
         <MultiSelectListPreference
@@ -49,7 +49,7 @@
             app:entries="@array/hide_thumbnail"
             app:entryValues="@array/hide_thumbnail_values"
             app:key="hide_thumbnails"
-            app:title="@string/hide_thumbnails" />
+            app:title="@string/vd_p_hide_thumbnails" />
 
         <MultiSelectListPreference
             app:icon="@drawable/vd_pref_card"
@@ -58,7 +58,7 @@
             android:entryValues="@array/modify_download_card_values"
             android:defaultValue="@array/modify_download_card_values"
             app:key="modify_download_card"
-            app:title="@string/modify_download_card" />
+            app:title="@string/vd_p_modify_download_card" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
@@ -66,8 +66,8 @@
             android:icon="@drawable/vd_pref_layers"
             android:key="display_over_apps"
             app:isPreferenceVisible="false"
-            app:summary="@string/display_over_apps_summary"
-            app:title="@string/display_over_apps" />
+            app:summary="@string/vd_p_display_over_apps_s"
+            app:title="@string/vd_p_display_over_apps" />
 
 
     </PreferenceCategory>
@@ -79,8 +79,8 @@
             android:defaultValue=""
             android:entries="@array/video_recommendations"
             android:entryValues="@array/video_recommnedations_values"
-            app:summary="@string/video_recommendations_summary"
-            app:title="@string/video_recommendations" />
+            app:summary="@string/vd_p_recommendations_home_s"
+            app:title="@string/vd_p_recommendations_home" />
 
         <EditTextPreference
             android:icon="@drawable/vd_pref_heart"
@@ -90,8 +90,8 @@
         <EditTextPreference
             android:icon="@drawable/vd_pref_key"
             app:key="api_key"
-            android:summary="@string/api_key_summary"
-            app:title="@string/api_key" />
+            android:summary="@string/vd_p_api_key_s"
+            app:title="@string/vd_p_api_key" />
 
         <ListPreference
             android:defaultValue="YT_DLP"
@@ -100,7 +100,7 @@
             android:icon="@drawable/vd_setting_home"
             app:key="youtube_data_fetching_extractor"
             app:useSimpleSummaryProvider="true"
-            app:title="@string/data_fetching_extractor_youtube" />
+            app:title="@string/vd_p_youtube_data_fetching_extractor" />
 
         <ListPreference
             android:defaultValue="yt-dlp"
@@ -109,7 +109,7 @@
             android:icon="@drawable/vd_setting_home"
             app:key="formats_source"
             app:useSimpleSummaryProvider="true"
-            app:title="@string/format_source" />
+            app:title="@string/vd_p_formats_source" />
 
 
         <SwitchPreferenceCompat
@@ -117,12 +117,12 @@
             app:defaultValue="false"
             app:icon="@drawable/vd_pref_quote"
             app:key="use_itemurl_instead_playlisturl"
-            app:summary="@string/use_item_url_not_playlist_summary"
-            app:title="@string/use_item_url_not_playlist" />
+            app:summary="@string/vd_p_use_itemurl_instead_playlisturl_s"
+            app:title="@string/vd_p_use_itemurl_instead_playlisturl" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/misc">
+    <PreferenceCategory android:title="@string/vd_ps_misc">
         <ListPreference
             android:defaultValue="share"
             android:entries="@array/history_quick_action_entries"
@@ -130,7 +130,7 @@
             app:icon="@drawable/vd_pref_pencil"
             app:useSimpleSummaryProvider="true"
             app:key="history_quick_action"
-            app:title="@string/history_quick_action" />
+            app:title="@string/vd_p_history_quick_action" />
 
         <ListPreference
             android:defaultValue=""
@@ -139,7 +139,7 @@
             app:icon="@drawable/vd_pref_language"
             app:useSimpleSummaryProvider="true"
             app:key="locale"
-            app:title="@string/preferred_locale" />
+            app:title="@string/vd_p_locale" />
 
         <ListPreference
             android:defaultValue="always"
@@ -148,7 +148,7 @@
             android:icon="@drawable/vd_pref_eye"
             app:key="label_visibility"
             app:useSimpleSummaryProvider="true"
-            app:title="@string/label_visibility" />
+            app:title="@string/vd_p_label_visibility" />
 
         <ListPreference
             android:defaultValue="ytsearch"
@@ -156,8 +156,8 @@
             android:entryValues="@array/search_engines_values"
             android:icon="@drawable/vd_setting_home"
             app:key="search_engine"
-            app:summary="@string/preferred_search_engine_summary"
-            app:title="@string/preferred_search_engine" />
+            app:summary="@string/vd_p_search_engine_s"
+            app:title="@string/vd_p_search_engine" />
 
 
         <SwitchPreferenceCompat
@@ -165,16 +165,16 @@
             app:defaultValue="true"
             app:icon="@drawable/vd_pref_clipboard"
             app:key="check_clipboard_home"
-            app:summary="@string/check_clipboard_home_summary"
-            app:title="@string/check_clipboard_home" />
+            app:summary="@string/vd_p_check_clipboard_home_s"
+            app:title="@string/vd_p_check_clipboard_home" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_setting_home"
             android:key="search_suggestions"
-            app:summary="@string/search_suggestions_summary"
-            app:title="@string/search_suggestions" />
+            app:summary="@string/vd_p_search_suggestions_s"
+            app:title="@string/vd_p_search_suggestions" />
 
         <MultiSelectListPreference
             android:icon="@drawable/vd_pref_hand"
@@ -182,55 +182,55 @@
             android:entries="@array/swipe_gestures"
             android:entryValues="@array/swipe_gestures_values"
             android:defaultValue="@array/swipe_gestures_values"
-            app:summary="@string/swipe_gestures_summary"
-            app:title="@string/swipe_gestures" />
+            app:summary="@string/vd_p_swipe_gesture_s"
+            app:title="@string/vd_p_swipe_gesture" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="true"
             android:icon="@drawable/vd_pref_hand"
             android:key="swipe_gestures_download_card"
-            app:title="@string/swipe_gestures_download_card" />
+            app:title="@string/vd_p_swipe_gestures_download_card" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_share"
             android:key="show_terminal"
-            app:title="@string/show_terminal" />
+            app:title="@string/vd_p_show_terminal" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="false"
             android:icon="@drawable/vd_pref_share"
             android:key="show_quick_download_share"
-            app:title="@string/show_quick_download_share_menu" />
+            app:title="@string/vd_p_show_quick_download_share" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="true"
             android:icon="@drawable/vd_pref_numbers"
             android:key="show_count_downloads"
-            app:title="@string/show_download_count" />
+            app:title="@string/vd_p_show_count_downloads" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="true"
             android:icon="@drawable/vd_pref_numbers"
             android:key="write_ytdlp_terminal"
-            app:title="@string/write_ytdlp_terminal" />
+            app:title="@string/vd_p_write_ytdlp_terminal" />
 
 
         <Preference
             app:icon="@drawable/vd_pref_battery"
             app:key="ignore_battery"
-            app:title="@string/ignore_battery_optimization" />
+            app:title="@string/vd_p_ignore_battery" />
 
         <Preference
             app:icon="@drawable/vd_pref_reset"
             app:key="reset_preferences"
-            android:summary="@string/reset_preferences_in_screen"
-            app:title="@string/reset" />
+            android:summary="@string/vd_p_reset_preferences_s"
+            app:title="@string/vd_p_reset_preferences" />
 
     </PreferenceCategory>
 

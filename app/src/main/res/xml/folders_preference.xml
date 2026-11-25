@@ -6,38 +6,38 @@
         android:defaultValue=""
         app:icon="@drawable/vd_pref_folder_music"
         app:key="music_path"
-        app:title="@string/music_directory" />
+        app:title="@string/vd_p_music_path" />
 
     <Preference
         android:defaultValue=""
         app:icon="@drawable/vd_pref_folder_video"
         app:key="video_path"
-        app:title="@string/video_directory" />
+        app:title="@string/vd_p_video_path" />
 
     <Preference
         android:defaultValue=""
         app:icon="@drawable/vd_setting_terminal"
         app:key="command_path"
-        app:title="@string/command_directory" />
+        app:title="@string/vd_p_command_path" />
 
     <Preference
         android:defaultValue=""
         app:icon="@drawable/vd_setting_folders"
         app:key="cache_path"
-        app:title="@string/cache_directory" />
+        app:title="@string/vd_p_cache_path" />
 
     <Preference
         app:icon="@drawable/vd_setting_folders"
         app:key="access_all_files"
-        android:summary="@string/access_all_directories_summary"
-        app:title="@string/access_all_directories" />
+        android:summary="@string/vd_p_access_all_files_s"
+        app:title="@string/vd_p_access_all_files" />
 
     <SwitchPreferenceCompat
         android:widgetLayout="@layout/preferece_material_switch"
         app:defaultValue="true"
         app:icon="@drawable/vd_pref_storage"
         app:key="check_available_storage"
-        app:title="@string/check_available_storage" />
+        app:title="@string/vd_p_check_available_storage" />
 
     <SwitchPreferenceCompat
         android:widgetLayout="@layout/preferece_material_switch"
@@ -45,8 +45,8 @@
         app:icon="@drawable/vd_pref_rename"
         android:enabled="false"
         app:key="cache_downloads"
-        app:summary="@string/cache_first_summary"
-        app:title="@string/cache_first" />
+        app:summary="@string/vd_p_cache_downloads_s"
+        app:title="@string/vd_p_cache_downloads" />
 
 
     <SwitchPreferenceCompat
@@ -54,8 +54,8 @@
         app:defaultValue="false"
         android:icon="@drawable/vd_pref_save"
         android:key="no_part"
-        app:summary="@string/no_download_fragments_summary"
-        app:title="@string/no_download_fragments" />
+        app:summary="@string/vd_p_no_part_s"
+        app:title="@string/vd_p_no_part" />
 
 
     <SwitchPreferenceCompat
@@ -63,8 +63,8 @@
         app:defaultValue="false"
         android:icon="@drawable/vd_pref_save"
         android:key="keep_cache"
-        app:summary="@string/keep_cache_summary"
-        app:title="@string/keep_cache" />
+        app:summary="@string/vd_p_keep_cache_s"
+        app:title="@string/vd_p_keep_cache" />
 
 
 
@@ -73,14 +73,14 @@
         app:key="file_name_template"
         app:useSimpleSummaryProvider="true"
         app:defaultValue="%(uploader).30B - %(title).170B"
-        app:title="@string/file_name_template" />
+        app:title="@string/vd_p_file_name_template" />
 
     <Preference
         android:icon="@drawable/vd_pref_rename"
         app:key="file_name_template_audio"
         app:useSimpleSummaryProvider="true"
         app:defaultValue="%(uploader).30B - %(title).170B"
-        app:title="@string/file_name_template" />
+        app:title="@string/vd_p_file_name_template_audio" />
 
     <MultiSelectListPreference
         app:dialogTitle="@string/save_subdirectory"
@@ -88,33 +88,33 @@
         app:entryValues="@array/save_subdirectory_values"
         app:icon="@drawable/vd_pref_rename"
         app:key="save_subdirectory"
-        app:summary="@string/save_subdirectory_summary"
-        app:title="@string/save_subdirectory" />
+        app:summary="@string/vd_p_save_subdirectory_s"
+        app:title="@string/vd_p_save_subdirectory" />
 
     <SwitchPreferenceCompat
         android:widgetLayout="@layout/preferece_material_switch"
         app:defaultValue="true"
         app:icon="@drawable/vd_pref_scissors"
         app:key="trim_filenames"
-        app:title="@string/trim_filenames" />
+        app:title="@string/vd_p_trim_filenames" />
 
     <SwitchPreferenceCompat
         android:widgetLayout="@layout/preferece_material_switch"
         app:defaultValue="false"
         app:icon="@drawable/vd_pref_rename"
         app:key="restrict_filenames"
-        app:summary="@string/restrict_filenames_summary"
-        app:title="@string/restrict_filenames" />
+        app:summary="@string/vd_p_restrict_filenames_s"
+        app:title="@string/vd_p_restrict_filenames" />
 
     <Preference
         app:icon="@drawable/vd_pref_folder_x"
         app:key="temporary_files"
-        app:title="@string/temporary_files" />
+        app:title="@string/vd_p_temporary_files" />
 
     <Preference
         app:icon="@drawable/vd_pref_reset"
         app:key="reset_preferences"
-        android:summary="@string/reset_preferences_in_screen"
-        app:title="@string/reset" />
+        android:summary="@string/vd_p_reset_preferences_s"
+        app:title="@string/vd_p_reset_preferences" />
 
 </PreferenceScreen>

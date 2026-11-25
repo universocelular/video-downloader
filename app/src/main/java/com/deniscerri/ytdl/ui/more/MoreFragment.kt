@@ -1,5 +1,6 @@
 package com.deniscerri.ytdl.ui.more
 
+import com.deniscerri.ytdl.ui.more.settings.BasicSettings
 import org.xmlpull.v1.XmlPullParser
 import android.widget.Toast
 import android.content.Context
@@ -111,7 +112,7 @@ class MoreFragment : Fragment() {
 
         override fun onExpert(expert: Boolean) {
             settingsState.expert = expert
-            mainSharedPreferences.edit().putBoolean(EXPERT_MODE, expert).apply()
+            mainSharedPreferences.edit().putBoolean(BasicSettings.EXPERT_MODE, expert).apply()
         }
 
         override fun onResetAdvanced() {
@@ -136,12 +137,18 @@ class MoreFragment : Fragment() {
         downloadViewModel = ViewModelProvider(this)[DownloadViewModel::class.java]
         return inflater.inflate(R.layout.fragment_more, container, false)
     }
+    override fun onResume() {
+        super.onResume()
+        // "Mostrar opciones avanzadas" in a settings page also unlocks Avanzado here
+        if (this::mainSharedPreferences.isInitialized) settingsState.expert = mainSharedPreferences.getBoolean(BasicSettings.EXPERT_MODE, false)
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         mainSharedPreferences =  PreferenceManager.getDefaultSharedPreferences(requireContext())
         mainSharedPreferencesEditor = mainSharedPreferences.edit()
-        settingsState.expert = mainSharedPreferences.getBoolean(EXPERT_MODE, false)
+        settingsState.expert = mainSharedPreferences.getBoolean(BasicSettings.EXPERT_MODE, false)
         terminal = view.findViewById(R.id.terminal)
         logs = view.findViewById(R.id.logs)
         commandTemplates = view.findViewById(R.id.command_templates)
@@ -258,7 +265,6 @@ class MoreFragment : Fragment() {
 
 }
 
-private const val EXPERT_MODE = "vd_expert_mode"
 
 /**
  * Puts every setting of the advanced screen (res/xml/advanced_preferences.xml) back as it came with the app, as its own

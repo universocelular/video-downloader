@@ -5,7 +5,7 @@
     <com.deniscerri.ytdl.ui.more.settings.updating.UpdateStatusCardPreference
         app:key="ytdlp_status_card" />
 
-    <PreferenceCategory android:title="@string/update_channel">
+    <PreferenceCategory android:title="@string/vd_ps_update_channel">
 
         <com.deniscerri.ytdl.ui.more.settings.updating.UpdateChannelPreference
             app:key="ytdlp_channel" />
@@ -13,19 +13,19 @@
         <Preference
             android:icon="@drawable/vd_pref_code"
             app:key="ytdlp_source_label"
-            app:title="@string/custom_channels" />
+            app:title="@string/vd_p_ytdlp_source_label" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/settings">
+    <PreferenceCategory android:title="@string/vd_ps_settings">
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
             app:defaultValue="true"
             app:icon="@drawable/vd_setting_engine"
             android:key="auto_update_ytdlp"
-            app:summary="@string/auto_update_ytdlp_summary"
-            app:title="@string/auto_update_ytdlp" />
+            app:summary="@string/vd_p_auto_update_ytdlp_s"
+            app:title="@string/vd_p_auto_update_ytdlp" />
 
         <SwitchPreferenceCompat
             app:isPreferenceVisible="false"
@@ -33,15 +33,15 @@
             android:icon="@drawable/vd_setting_engine"
             android:defaultValue="true"
             android:key="update_ytdlp_while_downloading"
-            android:summary="@string/update_ytdlp_while_downloading_summary"
-            android:title="@string/update_ytdlp_while_downloading" />
+            android:summary="@string/vd_p_update_ytdlp_while_downloading_s"
+            android:title="@string/vd_p_update_ytdlp_while_downloading" />
 
     </PreferenceCategory>
 
     <Preference
         app:icon="@drawable/vd_pref_reset"
         app:key="reset_preferences"
-        android:summary="@string/reset_preferences_in_screen"
-        app:title="@string/reset" />
+        android:summary="@string/vd_p_reset_preferences_s"
+        app:title="@string/vd_p_reset_preferences" />
 
 </PreferenceScreen>
