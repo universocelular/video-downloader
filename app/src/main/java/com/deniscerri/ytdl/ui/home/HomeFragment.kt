@@ -269,6 +269,8 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
 
         override fun onDownloadAnyway(url: String) = openSimpleSheet(downloadViewModel.createEmptyResultItem(url))
 
+        override fun onShowUpdates() = showAvailableUpdates()
+
         override fun onSeeAllTasks() {
             findNavController().navigate(R.id.downloadQueueMainFragment)
         }
@@ -999,7 +1001,10 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 launch {
-                    resultViewModel.availableUpdates.collect { updatesItem.isVisible = it.isNotEmpty() }
+                    resultViewModel.availableUpdates.collect {
+                        updatesItem.isVisible = it.isNotEmpty()
+                        home.updates = it.size
+                    }
                 }
                 launch {
                     resultViewModel.failedQueries.collect { list ->

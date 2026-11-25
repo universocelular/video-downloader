@@ -118,6 +118,8 @@ class HomeUiState {
     var hideThumbnails by mutableStateOf(false)
     /** Bumped to put the cursor in the link box. */
     var focusRequests by mutableIntStateOf(0)
+    /** App and package updates found at startup; the old toolbar button that listed them is hidden under this screen */
+    var updates by mutableIntStateOf(0)
 }
 
 interface HomeActions {
@@ -136,6 +138,7 @@ interface HomeActions {
     fun onRetry(url: String)
     fun onDownloadAnyway(url: String)
     fun onSeeAllTasks()
+    fun onShowUpdates()
 }
 
 /** "youtube.com" from a link, for short labels. */
@@ -153,6 +156,12 @@ fun HomeScreen(state: HomeUiState, actions: HomeActions) {
             .padding(start = VdSize.ScreenMargin, end = VdSize.ScreenMargin, top = 12.dp, bottom = 32.dp),
     ) {
         Header()
+        AnimatedVisibility(visible = state.updates > 0, enter = expandVertically() + fadeIn(), exit = shrinkVertically() + fadeOut()) {
+            Column {
+                Spacer(Modifier.height(16.dp))
+                UpdateBanner(state.updates, actions)
+            }
+        }
         AnimatedVisibility(
             visible = state.clipboard.isNotEmpty() && state.phase == HomePhase.Dashboard && state.input.isBlank(),
             enter = expandVertically() + fadeIn(),
@@ -188,6 +197,40 @@ private fun Header() {
         Image(painterResource(R.drawable.ic_app_icon), contentDescription = null, modifier = Modifier.size(34.dp))
         Spacer(Modifier.width(12.dp))
         Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineSmall, color = MaterialTheme.colorScheme.onSurface)
+    }
+}
+
+/** "Hay una versión nueva": opens the list of updates, where the app update downloads and asks to install */
+@Composable
+private fun UpdateBanner(count: Int, actions: HomeActions) {
+    val colors = MaterialTheme.colorScheme
+    val shape = MaterialTheme.shapes.medium
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .clip(shape)
+            .background(colors.tertiaryContainer)
+            .clickable(onClick = actions::onShowUpdates)
+            .padding(start = 12.dp, end = 8.dp, top = 8.dp, bottom = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Image(painterResource(R.drawable.vd_pref_phone_update), contentDescription = null, modifier = Modifier.size(32.dp))
+        Spacer(Modifier.width(10.dp))
+        Text(
+            if (count == 1) stringResource(R.string.vd_home_update_one) else stringResource(R.string.vd_home_update_many, count),
+            style = MaterialTheme.typography.bodyMedium,
+            color = colors.onTertiaryContainer,
+            modifier = Modifier.weight(1f),
+        )
+        Spacer(Modifier.width(8.dp))
+        Button(
+            onClick = actions::onShowUpdates,
+            shape = MaterialTheme.shapes.small,
+            contentPadding = PaddingValues(horizontal = 14.dp),
+            modifier = Modifier.height(VdSize.SmallControl),
+        ) {
+            Text(stringResource(R.string.vd_home_update_action), style = MaterialTheme.typography.labelLarge)
+        }
     }
 }
 

@@ -396,4 +396,7 @@
     <string name="vd_expert_hide_summary">Show only the basics again</string>
     <string name="vd_expert_button_short">I\'m an expert, show them</string>
     <string name="vd_expert_page_reset_hint">If something goes wrong, tap “Reset this screen” and everything goes back to how it came.</string>
+    <string name="vd_home_update_one">A new version is available</string>
+    <string name="vd_home_update_many">%1$d updates available</string>
+    <string name="vd_home_update_action">View</string>
 </resources>
