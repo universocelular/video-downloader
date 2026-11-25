@@ -23,8 +23,12 @@ commit=$(git -c user.name=EstadoListo -c user.email=estadolisto@localhost commit
 git branch -f publico "$commit"
 git -c credential.helper= -c "credential.helper=!'$(cygpath -m "$gh")' auth git-credential" push origin publico:main
 
-mkdir -p "../apk/v$version"
+# the files go up as VideoDownloader-2.0.2-arm64-v8a.apk: versions up to 2.0.2 skip any name with "foss"
+mkdir -p "../apk/v$version/publicar"
 cp "${apks[@]}" "../apk/v$version/"
-(cd "../apk/v$version" && sha256sum *.apk > SHA256.txt)
-"$gh" release create "v$version" "${apks[@]}" --repo "$repo" --title "Video Downloader $version" --notes-file "$notes" --target main
+for abi in arm64-v8a armeabi-v7a; do
+  cp "app/build/outputs/apk/foss/release/VideoDownloader-$version-foss-$abi-release.apk" "../apk/v$version/publicar/VideoDownloader-$version-$abi.apk"
+done
+(cd "../apk/v$version" && sha256sum *.apk publicar/*.apk > SHA256.txt)
+"$gh" release create "v$version" "../apk/v$version/publicar/"*.apk --repo "$repo" --title "Video Downloader $version" --notes-file "$notes" --target main
 echo "published v$version"

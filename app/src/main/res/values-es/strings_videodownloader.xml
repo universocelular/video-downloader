@@ -477,4 +477,7 @@
     <string name="vd_home_update_one">Hay una versión nueva</string>
     <string name="vd_home_update_many">Hay %1$d actualizaciones</string>
     <string name="vd_home_update_action">Ver</string>
+    <string name="vd_update_title">✨ Hay una versión nueva: %1$s</string>
+    <string name="vd_update_install_hint">Al terminar de bajar, Android te pregunta si quieres actualizar: toca «Actualizar».</string>
+    <string name="vd_update_later">Más tarde</string>
 </resources>

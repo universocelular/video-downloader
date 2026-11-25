@@ -49,6 +49,7 @@ import com.deniscerri.ytdl.ui.downloads.HistoryFragment
 import com.deniscerri.ytdl.ui.more.settings.SettingsActivity
 import com.deniscerri.ytdl.ui.more.MoreFragment
 import com.deniscerri.ytdl.ui.welcome.WelcomeActivity
+import com.deniscerri.ytdl.util.UiUtil
 import com.deniscerri.ytdl.util.ApkInstallUtil
 import com.deniscerri.ytdl.util.BgUtilsPoTokenGeneratorUtil
 import com.deniscerri.ytdl.util.CrashListener
@@ -476,9 +477,16 @@ class MainActivity : BaseActivity() {
     }
 
     private fun callAutoUpdates(firstRun : Boolean = false) {
-        resultViewModel.checkForUpdates { //on app update found
+        resultViewModel.checkForUpdates { release, updateUtil -> //on app update found
             if (preferences.getBoolean("automatic_backup", false)) {
                 settingsViewModel.backup()
+            }
+            // as in the Mudanza app: the offer shows up by itself when the app opens, unless "Más tarde" was chosen
+            // for this version in the last 12 hours; the Inicio banner keeps it at hand meanwhile
+            if (preferences.getLong(UiUtil.updateLaterKey(release), 0) < System.currentTimeMillis()) {
+                withContext(Dispatchers.Main) {
+                    UiUtil.showNewAppUpdateDialog(release, this@MainActivity, updateUtil, this@MainActivity, preferences, installLauncher)
+                }
             }
         }
         if (preferences.getBoolean("auto_update_ytdlp", false)){

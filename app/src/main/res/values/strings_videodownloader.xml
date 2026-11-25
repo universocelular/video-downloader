@@ -399,4 +399,7 @@
     <string name="vd_home_update_one">A new version is available</string>
     <string name="vd_home_update_many">%1$d updates available</string>
     <string name="vd_home_update_action">View</string>
+    <string name="vd_update_title">✨ A new version is out: %1$s</string>
+    <string name="vd_update_install_hint">When the download ends, Android asks whether to update: tap “Update”.</string>
+    <string name="vd_update_later">Later</string>
 </resources>

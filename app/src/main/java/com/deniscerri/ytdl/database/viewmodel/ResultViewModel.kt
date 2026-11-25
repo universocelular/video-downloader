@@ -111,14 +111,14 @@ class ResultViewModel(private val application: Application) : AndroidViewModel(a
     }
     val availableUpdates: MutableStateFlow<List<AvailableUpdate>> = MutableStateFlow(listOf())
 
-    fun checkForUpdates(onAppUpdateFound: suspend () -> Unit = {}) {
+    fun checkForUpdates(onAppUpdateFound: suspend (GithubRelease, UpdateUtil) -> Unit = { _, _ -> }) {
         if (!UpdateUtil.SELF_UPDATES || !sharedPreferences.getBoolean("update_app", true)) return
 
         viewModelScope.launch(Dispatchers.IO) {
             val updateUtil = UpdateUtil(application)
             val res = updateUtil.tryGetNewVersion()
             if (res.isSuccess) {
-                onAppUpdateFound()
+                onAppUpdateFound(res.getOrNull()!!, updateUtil)
                 availableUpdates.update { list ->
                     list.filterNot { it is AvailableUpdate.App } + AvailableUpdate.App(res.getOrNull()!!, updateUtil)
                 }

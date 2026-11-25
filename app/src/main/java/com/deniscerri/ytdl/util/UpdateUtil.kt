@@ -180,11 +180,11 @@ class UpdateUtil(var context: Context) {
     suspend fun downloadReleaseApk(release: GithubRelease, onProgress: (Long) -> Unit) : Result<File> {
         return withContext(Dispatchers.IO) {
             try {
+                // Video Downloader names its files "VideoDownloader-2.0.2-arm64-v8a.apk"; YTDLnis skipped any name with
+                // "foss", which made every update fail before downloading
                 val releaseVersion = release.assets.firstOrNull {
-                    it.name.contains(Build.SUPPORTED_ABIS[0])
-                    && !it.name.contains("foss")
-                    && !it.name.contains("izzy")
-                }!!
+                    it.name.endsWith(".apk") && it.name.contains(Build.SUPPORTED_ABIS[0]) && !it.name.contains("izzy")
+                } ?: return@withContext Result.failure(Throwable("This version has no file for ${Build.SUPPORTED_ABIS[0]}"))
                 File(FileUtil.getDefaultApksPath()).mkdirs()
                 val tempApk = File(FileUtil.getDefaultApksPath(), "${releaseVersion.browser_download_url.split("/").last()}")
 

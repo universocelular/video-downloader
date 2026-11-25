@@ -269,7 +269,11 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
 
         override fun onDownloadAnyway(url: String) = openSimpleSheet(downloadViewModel.createEmptyResultItem(url))
 
-        override fun onShowUpdates() = showAvailableUpdates()
+        override fun onShowUpdates() {
+            val updates = resultViewModel.availableUpdates.value
+            val app = updates.singleOrNull() as? ResultViewModel.AvailableUpdate.App
+            if (app != null) onUpdateSelected(app) else showAvailableUpdates()
+        }
 
         override fun onSeeAllTasks() {
             findNavController().navigate(R.id.downloadQueueMainFragment)

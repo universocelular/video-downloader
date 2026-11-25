@@ -2896,6 +2896,9 @@ object UiUtil {
         )
     }
 
+    /** Until when "Más tarde" holds back the offer of [release] at startup */
+    fun updateLaterKey(release: GithubRelease) = "vd_update_later_${release.tag_name}"
+
     @SuppressLint("UnspecifiedRegisterReceiverFlag")
     fun showNewAppUpdateDialog(
         v: GithubRelease,
@@ -2911,21 +2914,16 @@ object UiUtil {
         var neutralButton: Button? = null
         var tmpDownloadJob: Job? = null
 
-        val skippedVersions = preferences.getString("skip_updates", "")?.split(",")?.distinct()?.toMutableList() ?: mutableListOf()
-
+        // two choices, like the Mudanza app's update offer: "Actualizar" or "Más tarde" (asks again in 12 hours)
+        val notes = v.body + "\n\n" + context.getString(R.string.vd_update_install_hint)
         val updateDialog = MaterialAlertDialogBuilder(context)
-            .setTitle(v.tag_name)
-            .setMessage(v.body)
+            .setTitle(context.getString(R.string.vd_update_title, v.tag_name.removePrefix("v")))
+            .setMessage(notes)
             .setCancelable(false)
-            .setIcon(R.drawable.ic_update_app)
-            .setNeutralButton(R.string.ignore){ d: DialogInterface?, _:Int ->
+            .setIcon(R.drawable.vd_pref_phone_update)
+            .setNegativeButton(R.string.vd_update_later) { _: DialogInterface?, _: Int ->
                 tmpDownloadJob?.cancel()
-                skippedVersions.add(v.tag_name)
-                preferences.edit().putString("skip_updates", skippedVersions.joinToString(",")).apply()
-                d?.dismiss()
-            }
-            .setNegativeButton(R.string.cancel) { _: DialogInterface?, _: Int ->
-                tmpDownloadJob?.cancel()
+                preferences.edit().putLong(updateLaterKey(v), System.currentTimeMillis() + 12L * 3600 * 1000).apply()
             }
             .setPositiveButton(R.string.update, null)
         val view = updateDialog.show()
@@ -2940,7 +2938,7 @@ object UiUtil {
                 }
             }
         }).build()
-        mw.setMarkdown(textView, v.body)
+        mw.setMarkdown(textView, notes)
 
         positiveButton = view.getButton(android.app.AlertDialog.BUTTON_POSITIVE)
         negativeButton = view.getButton(android.app.AlertDialog.BUTTON_NEGATIVE)
@@ -2979,7 +2977,7 @@ object UiUtil {
                         withContext(Dispatchers.Main) {
                             positiveButton.text = context.getString(R.string.please_wait)
                             negativeButton.isEnabled = false
-                            neutralButton.isEnabled = false
+                            neutralButton?.isEnabled = false
 
                             ApkInstallUtil.installApk(context, file, installLauncher) { result ->
                                 result.onSuccess {
