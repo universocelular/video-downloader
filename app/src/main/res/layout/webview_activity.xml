@@ -35,7 +35,7 @@
                 android:layout_gravity="end"
                 android:layout_marginHorizontal="10dp"
                 android:autoLink="all"
-                android:text="@string/ok"
+                android:text="@string/vd_accounts_save"
                 app:icon="@drawable/ic_check"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -42,7 +42,6 @@ import com.deniscerri.ytdl.database.viewmodel.HistoryViewModel
 import com.deniscerri.ytdl.database.viewmodel.ResultViewModel
 import com.deniscerri.ytdl.ui.BaseActivity
 import com.deniscerri.ytdl.ui.home.SimpleDownloadHost
-import com.deniscerri.ytdl.ui.home.SimpleDownloadSheet
 import com.deniscerri.ytdl.util.Extensions.extractURL
 import com.deniscerri.ytdl.whatsapp.GlassTheme
 import com.deniscerri.ytdl.whatsapp.SplitForWhatsAppActivity
@@ -260,16 +259,9 @@ class ShareActivity : BaseActivity(), SimpleDownloadHost {
     }
 
     private val shareActions = ShareActions(
-        onDownload = {
-            val video = shareState?.result
-            if (video != null) {
-                downloadCardViewModel.setResultItem(video)
-                downloadCardViewModel.setDownloadItem(null)
-                if (supportFragmentManager.findFragmentByTag(SIMPLE_SHEET) == null) SimpleDownloadSheet().show(supportFragmentManager, SIMPLE_SHEET)
-            } else {
-                downloadAsIs()
-            }
-        },
+        // "Descargar" starts at once with the usual settings, as the user expects from a shared link (26/11/2026);
+        // quality and the rest are in "Más opciones"
+        onDownload = { downloadAsIs(shareState?.result) },
         onSplit = {
             shareState?.url?.let { url ->
                 startActivity(
@@ -284,14 +276,15 @@ class ShareActivity : BaseActivity(), SimpleDownloadHost {
     )
 
     /** "Descargar" when the link could not be read: queued as it is, with the user's preferences */
-    private fun downloadAsIs() {
-        val result = sharedResult ?: return
+    /** Queues the video that was read ([video]), or the bare link when it could not be read */
+    private fun downloadAsIs(video: ResultItem?) {
+        val result = video ?: sharedResult ?: return
         val type = sharedType
         lifecycleScope.launch {
-            withContext(Dispatchers.IO) {
+            val queued = withContext(Dispatchers.IO) {
                 downloadViewModel.queueDownloads(listOf(downloadViewModel.createDownloadItemFromResult(result = result, givenType = type)))
             }
-            Toast.makeText(this@ShareActivity, "${getString(R.string.downloading)} ${result.url}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@ShareActivity, queued.message.ifBlank { getString(R.string.vd_sheet_added) }, Toast.LENGTH_SHORT).show()
             finish()
         }
     }
@@ -333,6 +326,5 @@ class ShareActivity : BaseActivity(), SimpleDownloadHost {
     }
 
     companion object {
-        private const val SIMPLE_SHEET = "simpleDownload"
     }
 }

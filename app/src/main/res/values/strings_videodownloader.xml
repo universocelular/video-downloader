@@ -196,6 +196,16 @@
     <string name="vd_set_downloads_summary">Quality, mobile data and schedules</string>
     <string name="vd_set_folders">Folders and names</string>
     <string name="vd_set_folders_summary">Where files are saved</string>
+    <string name="vd_set_accounts">Accounts</string>
+    <string name="vd_set_accounts_summary">Sign in to Facebook or Instagram for videos that ask for it</string>
+    <string name="vd_accounts_title">Sign in to a site</string>
+    <string name="vd_accounts_message">Some videos are only shown to signed-in people. Sign in once here and the app will be able to download them.
+
+Your password stays on the site: the app only keeps the session.</string>
+    <string name="vd_accounts_other">Other sites and saved sessions</string>
+    <string name="vd_accounts_hint">Sign in, then tap \"Save session\" at the top</string>
+    <string name="vd_accounts_done">Done: %1$s videos that ask for an account will download now</string>
+    <string name="vd_accounts_save">Save session</string>
     <string name="vd_set_media">Video and audio</string>
     <string name="vd_set_media_summary">Formats, subtitles and covers</string>
     <string name="vd_set_engine">Download engine</string>

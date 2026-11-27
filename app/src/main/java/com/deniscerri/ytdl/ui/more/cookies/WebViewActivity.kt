@@ -165,7 +165,8 @@ open class WebViewActivity : BaseActivity() {
                         webView = view
                         super.onPageFinished(view, url)
                         runCatching {
-                            toolbar.title = view?.title ?: ""
+                            // no page title: next to "Guardar sesión" it only fit as "Face…"
+                            toolbar.title = null
                             cookies = cookieManager.getCookie(view?.url)
                         }
 

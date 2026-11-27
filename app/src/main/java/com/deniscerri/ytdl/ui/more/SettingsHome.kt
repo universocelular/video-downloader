@@ -57,6 +57,7 @@ enum class SettingsCategory(@DrawableRes val icon: Int, @StringRes val title: In
     Appearance(R.drawable.vd_setting_appearance, R.string.vd_set_appearance, R.string.vd_set_appearance_summary),
     Home(R.drawable.vd_setting_home, R.string.vd_set_home, R.string.vd_set_home_summary),
     Downloads(R.drawable.vd_setting_downloads, R.string.vd_set_downloads, R.string.vd_set_downloads_summary),
+    Accounts(R.drawable.vd_pref_cookie, R.string.vd_set_accounts, R.string.vd_set_accounts_summary),
     Folders(R.drawable.vd_setting_folders, R.string.vd_set_folders, R.string.vd_set_folders_summary),
     Media(R.drawable.vd_setting_media, R.string.vd_set_media, R.string.vd_set_media_summary),
     Engine(R.drawable.vd_setting_engine, R.string.vd_set_engine, R.string.vd_set_engine_summary),

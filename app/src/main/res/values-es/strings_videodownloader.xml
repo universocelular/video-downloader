@@ -272,6 +272,16 @@
     <string name="vd_set_downloads_summary">Calidad, datos móviles y horarios</string>
     <string name="vd_set_folders">Carpetas y nombres</string>
     <string name="vd_set_folders_summary">Dónde se guardan los archivos</string>
+    <string name="vd_set_accounts">Cuentas</string>
+    <string name="vd_set_accounts_summary">Inicia sesión en Facebook o Instagram para videos que lo piden</string>
+    <string name="vd_accounts_title">Iniciar sesión en un sitio</string>
+    <string name="vd_accounts_message">Algunos videos solo se muestran a quien tiene la sesión iniciada. Inicia sesión una vez aquí y la app podrá descargarlos.
+
+Tu contraseña queda en el sitio: la app solo guarda la sesión.</string>
+    <string name="vd_accounts_other">Otros sitios y sesiones guardadas</string>
+    <string name="vd_accounts_hint">Inicia sesión y después toca \"Guardar sesión\" arriba</string>
+    <string name="vd_accounts_done">Listo: los videos de %1$s que piden cuenta ya se pueden descargar</string>
+    <string name="vd_accounts_save">Guardar sesión</string>
     <string name="vd_set_media">Video y audio</string>
     <string name="vd_set_media_summary">Formatos, subtítulos y portadas</string>
     <string name="vd_set_engine">Motor de descargas</string>

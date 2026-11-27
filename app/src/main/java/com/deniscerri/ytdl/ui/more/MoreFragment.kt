@@ -3,7 +3,10 @@ package com.deniscerri.ytdl.ui.more
 import com.deniscerri.ytdl.ui.more.settings.BasicSettings
 import org.xmlpull.v1.XmlPullParser
 import android.widget.Toast
+import android.app.Activity
 import android.content.Context
+import androidx.activity.result.contract.ActivityResultContracts
+import com.deniscerri.ytdl.ui.more.cookies.WebViewActivity
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -35,6 +38,41 @@ import kotlinx.coroutines.launch
 import kotlin.system.exitProcess
 
 class MoreFragment : Fragment() {
+    /** The site picked in "Cuentas", named in the message after its session is saved */
+    private var accountSite = ""
+
+    private val accountLogin = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode != Activity.RESULT_OK) return@registerForActivityResult
+        // downloads only send the saved sessions to yt-dlp while this is on
+        PreferenceManager.getDefaultSharedPreferences(requireContext()).edit().putBoolean("use_cookies", true).apply()
+        Toast.makeText(requireContext(), getString(R.string.vd_accounts_done, accountSite), Toast.LENGTH_LONG).show()
+    }
+
+    /**
+     * "Ajustes › Cuentas": Facebook hides many reels from people who are not signed in (yt-dlp then says "No video
+     * found"), so the person signs in once in the app's web screen and its session cookies go with every download.
+     */
+    private fun chooseAccount() {
+        val sites = listOf("Facebook" to "https://www.facebook.com/", "Instagram" to "https://www.instagram.com/accounts/login/")
+        MaterialAlertDialogBuilder(requireContext())
+            .setIcon(R.drawable.vd_pref_cookie)
+            .setTitle(R.string.vd_accounts_title)
+            // a list, not three dialog buttons: those stacked unevenly and cut "Otros sitios…" short
+            .setItems((sites.map { it.first } + getString(R.string.vd_accounts_other)).toTypedArray()) { _, which ->
+                if (which < sites.size) openLogin(sites[which]) else findNavController().navigate(R.id.cookiesFragment)
+            }
+            .setNegativeButton(R.string.cancel, null)
+            .show()
+    }
+
+    private fun openLogin(site: Pair<String, String>) {
+        accountSite = site.first
+        Toast.makeText(requireContext(), R.string.vd_accounts_hint, Toast.LENGTH_LONG).show()
+        accountLogin.launch(
+            Intent(requireContext(), WebViewActivity::class.java).putExtra("url", site.second).putExtra("description", site.first)
+        )
+    }
+
     private lateinit var mainSharedPreferences: SharedPreferences
     private lateinit var mainSharedPreferencesEditor: SharedPreferences.Editor
     private lateinit var terminal: TextView
@@ -78,6 +116,7 @@ class MoreFragment : Fragment() {
         override fun onCategory(category: SettingsCategory) {
             // the settings screens live in SettingsActivity, opened straight at the category
             val (destination, scrollTo) = when (category) {
+                SettingsCategory.Accounts -> return chooseAccount()
                 SettingsCategory.Appearance -> R.id.appearanceSettingsFragment to null
                 SettingsCategory.Home -> R.id.appearanceSettingsFragment to "search_engine"
                 SettingsCategory.Downloads -> R.id.downloadSettingsFragment to null
